@@ -8,7 +8,8 @@ Canvas {
     width: 100vw!important;
     height: 100vh!important;
     background-color: rgb(39, 39, 39);
-    display: flex;
+    display: flex!important;
+    z-index: 0!important;
     align-items: center;
     justify-content: center;
 }

@@ -4,7 +4,8 @@ import { Cloud } from "@react-three/drei";
 export default function Fog_3D() {
   return (
     <Cloud
-      opacity={0.05}
+      position={[0,0,-50]}
+      opacity={0.9}
       speed={0.2} // Rotation speed
       width={10} // Width of the full cloud
       depth={1.5} // Z-dir depth

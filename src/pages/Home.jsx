@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 
 export default function Home() {
   return (
-    <div className="absolute w-screen h-screen z-10">
+    <div className="absolute h-screen z-10">
       <h1
         className="
           absolute
@@ -13,6 +13,7 @@ export default function Home() {
           text-2xl
           font-megrim
           text-slate-100
+          z-10
         "
       >Welcome 
       my name is 
