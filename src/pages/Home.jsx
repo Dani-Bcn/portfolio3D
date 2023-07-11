@@ -16,8 +16,7 @@ export default function Home() {
           z-10
         "
       >Welcome 
-      my name is 
-      Dani
+      my name is ...
       </h1>
     </div>
   );

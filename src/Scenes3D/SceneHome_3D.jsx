@@ -6,8 +6,8 @@ import {
   Scroll,
   ScrollControls,
 } from "@react-three/drei";
-import { Cube_home } from "../components3D/Cube_home";
 import Fog_3D from "../components3D/Fog_3D";
+import { NombreDani } from "../components3D/NombreDani";
 
 export default function SceneHome_3D() {
 
@@ -25,8 +25,7 @@ export default function SceneHome_3D() {
             <planeGeometry />
             <meshStandardMaterial color={"rgb(120,120,120)"} />
           </mesh>
-          <Fog_3D/>
-          <Cube_home/>
+          <NombreDani/>
         </Scroll>
       </ScrollControls>
     </Canvas>
