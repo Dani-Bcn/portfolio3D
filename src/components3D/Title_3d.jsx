@@ -52,7 +52,7 @@ export default function Title_3d() {
 
   const Responsive2 = () => {
     return (
-      <group position={[-2, -0.3, 0]} scale={2.5}>
+      <group position={[-2, -0.5, 0]} scale={2.5}>
         <Text3D
           ref={textRef}
           scale={0.5}
