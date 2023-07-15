@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 Canvas {   
+    overflow: hidden!important;
     width: 100vw!important;
-    height: 100vh!important;
+    height:100vh!important;
     background-color: rgb(39, 39, 39);
     display: flex!important;
-    z-index: 0!important;
+    z-index: 10!important;
     align-items: center;
     justify-content: center;
 }

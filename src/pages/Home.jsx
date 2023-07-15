@@ -1,7 +1,8 @@
-import React from "react";
-import { gsap } from "gsap";
+import React, { useEffect, useState } from "react";
 
 export default function Home() {
+
+
   return (
     <div className="absolute h-screen z-10">
       <h1
@@ -15,8 +16,8 @@ export default function Home() {
           text-slate-100
           z-10
         "
-      >Welcome 
-      my name is ...
+      >
+        Welcome i'm  ...
       </h1>
     </div>
   );
