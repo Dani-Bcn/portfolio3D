@@ -62,12 +62,7 @@ export function CirclesInit(props) {
           material-color="wheat"
         />
         </group>
-        <Html
-          
-        >
-            
-            Enter
-            </Html>
+        
       </group>
     </group>
   );

@@ -30,10 +30,10 @@ export default function Title_3d() {
 
   const Responsive = () => {
     return (
-      <group position={[-0.7, -0.2, 0]} scale={0.8}>
+      <group position={[-0.65, -0.2, 0]} scale={0.8}>
         <Text3D
           ref={textRef}
-          scale={0.5}
+          scale={0.4}
           position={[-0.2, 0, 0]}
           curveSegments={32}
           bevelEnabled
@@ -44,7 +44,7 @@ export default function Title_3d() {
           font="/Bruno.json"
         >
           <meshStandardMaterial color={"red"} />
-          DANI
+         Enter
         </Text3D>
       </group>
     );
@@ -72,8 +72,8 @@ export default function Title_3d() {
       <group position={[-2, -0.5, 0]} scale={2.5}>
         <Text3D
           ref={textRef}
-          scale={0.5}
-          position={[-0.2, 0, 0]}
+          scale={0.13}
+          position={[0.48, 0.12, 0]}
           curveSegments={32}
           bevelEnabled
           bevelSize={0.02}
@@ -87,14 +87,9 @@ export default function Title_3d() {
             metalness={0.8}
             roughness={0.9}
           />
-          D
+          Enter
         </Text3D>
-        <mesh
-          ref={circleRef}
-        >
-          <ringGeometry args={[1, 100, 1]} />
-          <meshStandardMaterial />
-        </mesh>
+       
       </group>
     );
   };
