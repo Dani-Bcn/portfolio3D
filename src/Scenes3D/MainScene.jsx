@@ -10,6 +10,7 @@ import {
 from "@react-three/drei";
 import { Stars } from "@react-three/drei";
 import LightsHome from "./LightsHome";
+import { CirclesInit } from "../components3D/CirclesInit";
 
 export default function MainScene() {
   return (
@@ -27,6 +28,7 @@ export default function MainScene() {
           </mesh>           
           <Title_3d />
           <LightsHome /> 
+          <CirclesInit/>
           <Stars  radius={2} depth={1} count={5000} factor={4} fade saturation={0}  speed={2} />
         </Scroll>
       </ScrollControls>

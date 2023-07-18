@@ -1,15 +1,15 @@
 import { useRef, useState, useEffect } from "react";
-import { Html, Text3D, useScroll } from "@react-three/drei";
+import { Text3D, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { gsap } from "gsap";
 
 export default function Title_3d() {
   const textRef = useRef();
   const data = useScroll();
-
-  const [activeResponsive, setActiveResponsive] = useState(true);
+  const circleRef = useRef()
+  const [activeResponsive, setActiveResponsive] = useState();
 
   useEffect(() => {
-
     console.log(window.screen.orientation.type);
 
     function handleOrientationChange() {
@@ -26,10 +26,9 @@ export default function Title_3d() {
     return () => {
       window.removeEventListener("resize", handleOrientationChange);
     };
-  }, [activeResponsive]);
+  });
 
   const Responsive = () => {
-
     return (
       <group position={[-0.7, -0.2, 0]} scale={0.8}>
         <Text3D
@@ -44,13 +43,31 @@ export default function Title_3d() {
           size={1}
           font="/Bruno.json"
         >
-          <meshStandardMaterial />DANI
-        </Text3D>       
+          <meshStandardMaterial color={"red"} />
+          DANI
+        </Text3D>
       </group>
     );
   };
 
   const Responsive2 = () => {
+    useFrame((state) => {
+      console.log(state.mouse.x);
+
+      gsap.to(textRef.current.rotation, {
+        x: 0.1,
+        duration: 2,
+      });
+      gsap.to(textRef.current.rotation, {
+        x: state.mouse.x / 10,
+        duration: 2,
+      });
+      gsap.to(textRef.current.rotation, {
+        y: state.mouse.x / 10,
+        duration: 2,
+      });
+    });
+
     return (
       <group position={[-2, -0.5, 0]} scale={2.5}>
         <Text3D
@@ -65,10 +82,22 @@ export default function Title_3d() {
           size={1}
           font="/Bruno.json"
         >
-          DANI
+          <meshStandardMaterial
+            color={"rgb(100,100,150)"}
+            metalness={0.8}
+            roughness={0.9}
+          />
+          D
         </Text3D>
+        <mesh
+          ref={circleRef}
+        >
+          <ringGeometry args={[1, 100, 1]} />
+          <meshStandardMaterial />
+        </mesh>
       </group>
     );
   };
+
   return <group>{activeResponsive ? <Responsive2 /> : <Responsive />}</group>;
 }
