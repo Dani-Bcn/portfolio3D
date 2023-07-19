@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState ,useEffect} from "react";
 import { Html, useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
@@ -7,11 +7,28 @@ export function CirclesInit(props) {
   const groupRef2 = useRef();
   const { nodes, materials } = useGLTF("/CirclesInit.glb");
   const [init, setInit] = useState(false);
+  const [activeResponsive, setActiveResponsive] = useState();
+  const [scaleCircles,setScaleCircles ] = useState(0.004)
 
+  useEffect(() => {
+
+    function handleOrientationChange() {
+      if (window.screen.orientation.type === "portrait-primary") {
+        setScaleCircles(0.004)
+      } else {
+        setScaleCircles(0.008)
+      }
+    }
+
+    window.addEventListener("resize", handleOrientationChange);
+    return () => {
+      window.removeEventListener("resize", handleOrientationChange);
+    };
+  });
   const funcInit = () => {
     setInit(!init);
   };
-  console.log(init);
+  console.log(scaleCircles);
 
   useFrame(() => {
     groupRef.current.rotation.z += 1 / 20;
@@ -29,7 +46,7 @@ export function CirclesInit(props) {
         <circleGeometry />
         <meshStandardMaterial transparent="true" opacity={0} />
       </mesh>
-      <group {...props} dispose={null} scale={0.004}>
+      <group {...props} dispose={null} scale={scaleCircles}>
         <group position={[4.096, 0.23, 0]} rotation={[0, 0, -2.642]}>
           <group ref={groupRef}>
             <mesh

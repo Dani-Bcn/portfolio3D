@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas } from "@react-three/fiber";
-import Title_3d from "../components3D/Title_3d";
+
 import {
   ScrollControls,
   Scroll,
@@ -29,7 +29,7 @@ export default function MainScene(props) {
             <planeGeometry />
             <meshStandardMaterial color={"rgb(120,120,120)"} />
           </mesh>           
-          <Title_3d />
+          
           <LightsHome /> 
           <CirclesInit funcInit={funcInit}/>
           <Stars  radius={2} depth={1} count={5000} factor={4} fade saturation={0}  speed={2} />
