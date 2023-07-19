@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
-
 import { useFrame } from "@react-three/fiber";
 
 export default function LightsHome() {
+  
   const light1Ref = useRef();
   const light2Ref = useRef();
 

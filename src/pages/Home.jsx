@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 export default function Home() {
 
 
+   
   return (
     <div className="absolute h-screen z-10">
       <h1
@@ -17,9 +18,9 @@ export default function Home() {
           z-10
         "
       >
-        Welcome i'm  ...
+        Welcome i'm ... Dani Pérez
+       
       </h1>
-      
     </div>
   );
 }

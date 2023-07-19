@@ -3,10 +3,11 @@ import Home from "./pages/Home";
 import MainScene from "./Scenes3D/MainScene";
 
 function App() {
+
   return (
     <main>
-      <Home />
-      <MainScene/>
+      <Home  />
+      <MainScene  />
     </main>
   );
 }

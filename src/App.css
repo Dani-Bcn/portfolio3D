@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+    padding: 0;
+    margin: 0;
+}
+
 Canvas {   
     overflow: hidden!important;
     width: 100vw!important;
@@ -11,4 +16,19 @@ Canvas {
     z-index: 10!important;
     align-items: center;
     justify-content: center;
+}
+article{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -25px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+}
+
+h1{
+    font-size: 4rem;
+
 }
