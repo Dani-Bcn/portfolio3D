@@ -18,7 +18,6 @@ export default function MainScene() {
 
   const funcInit = () => {
     setInit(!init);
-    console.log(init);
 
     init? 
     gsap.to(starsRef.current.position,{
