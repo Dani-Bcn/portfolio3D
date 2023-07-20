@@ -24,9 +24,12 @@ article{
     display: flex;
     justify-content: start;
     align-items: flex-start;
+    font-family: 'Megrim', cursive;
+    font-weight: 600;
 }
 
 h1{
     font-size: 4rem;
+    color: red;
 
 }

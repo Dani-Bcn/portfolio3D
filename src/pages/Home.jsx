@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
-
-
    
   return (
     <div className="absolute h-screen z-10">
@@ -14,12 +12,11 @@ export default function Home() {
           h-200
           text-2xl
           font-megrim
-          text-slate-100
+          text-blue-200
           z-10
         "
       >
-        Welcome i'm ... Dani Pérez
-       
+                Welcome i'm ... Dani Pérez       
       </h1>
     </div>
   );

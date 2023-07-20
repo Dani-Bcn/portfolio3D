@@ -1,17 +1,26 @@
 import React, { useRef, useState ,useEffect} from "react";
-import { Html, useGLTF } from "@react-three/drei";
+import { Html, useGLTF,useCursor } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { gsap } from "gsap";
 
 export function CirclesInit(props) {
+
+  const {funcInit} = props
   const groupRef = useRef();
   const groupRef2 = useRef();
+  const circle1Ref = useRef()
+  const circle2Ref = useRef()
+  const circle3Ref = useRef()
+  const circle4Ref = useRef()
+  const circle5Ref = useRef()
   const { nodes, materials } = useGLTF("/CirclesInit.glb");
   const [init, setInit] = useState(false);
   const [activeResponsive, setActiveResponsive] = useState();
   const [scaleCircles,setScaleCircles ] = useState(0.004)
+  const [ativeCursor,setActieCursor] = useState(false)
+  useCursor(ativeCursor)
 
   useEffect(() => {
-
     function handleOrientationChange() {
       if (window.screen.orientation.type === "portrait-primary") {
         setScaleCircles(0.004)
@@ -24,25 +33,100 @@ export function CirclesInit(props) {
     return () => {
       window.removeEventListener("resize", handleOrientationChange);
     };
+
   });
-  const funcInit = () => {
-    setInit(!init);
-  };
-  console.log(scaleCircles);
+
+ 
 
   useFrame(() => {
     groupRef.current.rotation.z += 1 / 20;
     groupRef2.current.rotation.z += -1 / 50;
   });
 
+  const activeOnPointer =(()=>{
+    setActieCursor(true)
+
+    gsap.to(circle1Ref.current.scale,{
+      z: 1.5,
+      x:1.5,
+      y:1.5,
+      duration:0.3
+      
+    })
+    gsap.to(circle2Ref.current.scale,{
+      z: 1.5,
+      x:1.5,
+      y:1.5
+      ,duration:0.5
+    })
+    gsap.to(circle3Ref.current.scale,{
+      z: 1.5,
+      x:1.5,
+      y:1.5,
+      duration:0.8
+      
+    })
+    gsap.to(circle4Ref.current.scale,{
+      z: 1.5,
+      x:1.5,
+      y:1.5
+      ,duration:1
+    })
+    gsap.to(circle5Ref.current.scale,{
+      z: 1.5,
+      x:1.5,
+      y:1.5,
+      duration:1.3
+    })
+  })
+
+  const desactiveOnPointer =(()=>{
+    setActieCursor(false)
+    gsap.to(circle1Ref.current.scale,{
+      z: 1,
+      x:1,
+      y:1,
+      duration:0.2
+    })
+    gsap.to(circle2Ref.current.scale,{
+      z: 1,
+      x:1,
+      y:1,
+      duration:0.5
+    })
+    gsap.to(circle3Ref.current.scale,{
+      z: 1,
+      x:1,
+      y:1,
+      duration:0.8
+    })
+    gsap.to(circle4Ref.current.scale,{
+      z: 1,
+      x:1,
+      y:1,
+      duration:1
+    })
+    gsap.to(circle5Ref.current.scale,{
+      z: 1,
+      x:1,
+      y:1,
+      duration:1.3
+    })
+  })
+
   return (
-    <group>
+    <group
+     
+    >
       <Html position={[-0.1, 0, 0]}>
         <article>
           <h1>Go</h1>
         </article>
       </Html>
-      <mesh onClick={() => funcInit()} scale={0.95}>
+      <mesh 
+        onClick={() => funcInit()} scale={1.5}
+        onPointerOver={() => activeOnPointer()} onPointerOut={() => desactiveOnPointer()}
+      >
         <circleGeometry />
         <meshStandardMaterial transparent="true" opacity={0} />
       </mesh>
@@ -50,6 +134,7 @@ export function CirclesInit(props) {
         <group position={[4.096, 0.23, 0]} rotation={[0, 0, -2.642]}>
           <group ref={groupRef}>
             <mesh
+            ref={circle1Ref}
               castShadow
               receiveShadow
               geometry={nodes.Sweep4.geometry}
@@ -57,6 +142,7 @@ export function CirclesInit(props) {
               material-color="red"
             />
             <mesh
+              ref={circle2Ref}
               castShadow
               receiveShadow
               geometry={nodes.Sweep3.geometry}
@@ -66,28 +152,30 @@ export function CirclesInit(props) {
           </group>
           <group ref={groupRef2}>
             <mesh
+              ref={circle3Ref}
               castShadow
               receiveShadow
               geometry={nodes.Sweep.geometry}
               material={nodes.Sweep.material}
               position={[-4.096, -0.23, 0]}
-              material-color="green"
+              material-color="wheat"
             />
             <mesh
+              ref={circle4Ref}
               castShadow
               receiveShadow
               geometry={nodes.Sweep1.geometry}
               material={nodes.Sweep1.material}
               position={[4.783, -5.693, 0]}
-              material-color="black"
+              material-color="rgb(100,150,100)"
             />
             <mesh
+                ref={circle5Ref}
               castShadow
               receiveShadow
               geometry={nodes.Sweep2.geometry}
-              material={nodes.Sweep2.material}
               position={[11.322, -0.187, 0]}
-              material-color="wheat"
+              material-color="yellow"
             />
           </group>
         </group>
