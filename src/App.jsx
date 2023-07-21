@@ -6,7 +6,7 @@ function App() {
 
   return (
     <main>
-      <Home  />
+       <Home  /> 
       <MainScene  />
     </main>
   );

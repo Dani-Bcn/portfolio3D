@@ -141,13 +141,12 @@ export function CirclesInit(props) {
     duration:0.5
   }):
   gsap.to(mainRef.current.position,{
-    z:250,
+    z:500,
     delay:0.5,
-    duration:0.5
+    duration:2
   })
   
-
-    setActivePage(!activePage)
+      setActivePage(!activePage)
      funcInit()
    })
 

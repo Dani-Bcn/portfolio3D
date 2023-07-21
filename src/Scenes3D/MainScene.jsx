@@ -10,6 +10,7 @@ import { Stars } from "@react-three/drei";
 import LightsHome from "./LightsHome";
 import { CirclesInit } from "../components3D/CirclesInit";
 import { gsap } from "gsap";
+import Home3d from "../components3D/Home3d";
 
 export default function MainScene() {
   const cameraRef = useRef();
@@ -18,7 +19,6 @@ export default function MainScene() {
 
   const funcInit = () => {
     setInit(!init);
-
     init? 
     gsap.to(starsRef.current.position,{
       z:50,
@@ -29,7 +29,6 @@ export default function MainScene() {
       z:300,
       duration:1
     })
-
   };
 
   return (
@@ -57,8 +56,10 @@ export default function MainScene() {
             fade
             saturation={0}
             speed={2}
-          />
+          /> 
+          <Home3d init={init}/>
         </Scroll>
+       
       </ScrollControls>
     </Canvas>
   );
