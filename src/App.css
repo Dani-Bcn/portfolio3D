@@ -27,3 +27,13 @@ article{
     font-family: 'Megrim', cursive;
     font-weight: 600;
 }
+article2{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Megrim', cursive;
+    font-weight: 600;
+}
