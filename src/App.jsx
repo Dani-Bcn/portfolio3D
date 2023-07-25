@@ -1,13 +1,11 @@
 import "./App.css";
-import Home from "./pages/Home";
-import MainScene from "./Scenes3D/MainScene";
+import MainScene from "./scenes3d/MainScene";
 
 function App() {
 
   return (
-    <main>
-       <Home  /> 
-      <MainScene  />
+    <main>     
+      <MainScene/>
     </main>
   );
 }
