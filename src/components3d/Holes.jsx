@@ -27,12 +27,12 @@ export default function Holes() {
     groupRef.current.scale.y = 1 + data.range(0, 1 / 1) * 1.1;
     groupRef.current.scale.x = 1 + data.range(0, 1 / 1) * 1.1;
     theLenght = 1.5 + data.range(0, 1 / 1) * 4;
-    circleBlueUp.current.color.b = 255 - data.range(0,1 /2) *250
-    circleBlueDown.current.color.b = 255 - data.range(0,1 /2) *250
-    circleGreenUp.current.color.g = 255 - data.range(0,1 /2) *250
-    circleGreenDown.current.color.g = 255 - data.range(0,1 /2) *250
-    circlePurpleUp.current.color.r = 255 - data.range(0,1 /2) *250
-    circlePurpleDown.current.color.r = 255 - data.range(0,1 /2) *250
+    circleBlueUp.current.color.b = 255 - data.range(0,1 /2) *255
+    circleBlueDown.current.color.b = 255 - data.range(0,1 /2) *255
+    circleGreenUp.current.color.g = 255 - data.range(0,1 /2) *245
+    circleGreenDown.current.color.g = 255 - data.range(0,1 /2) *245
+    circlePurpleUp.current.color.r = 255 - data.range(0,1 /2) *220
+    circlePurpleDown.current.color.r = 255 - data.range(0,1 /2) *220
      bloomRef.current.luminanceSmoothing = 2 - data.range(0,1 /2) 
   });
 
