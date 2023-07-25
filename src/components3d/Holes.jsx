@@ -46,7 +46,7 @@ export default function Holes() {
             luminanceThreshold={0.1}
             luminanceSmoothing={0.1}
             intensity={10}
-            
+
           />
         </EffectComposer>
         <group>
@@ -84,12 +84,13 @@ export default function Holes() {
             <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
               <ringGeometry args={[2.5, 2.52, 100, 0, -2.1, 1.5]} />
               <meshStandardMaterial
-              ref={circlePurpleDown}             
+              ref={circleBlueDown}             
               />
             </mesh>
           </group>
         </group>
       </group>
+
     );
   };
 
