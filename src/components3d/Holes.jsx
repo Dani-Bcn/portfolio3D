@@ -29,10 +29,10 @@ export default function Holes() {
     theLenght = 1.5 + data.range(0, 1 / 1) * 4;
     circleBlueUp.current.color.b = 255 - data.range(0,1 /2) *255
     circleBlueDown.current.color.b = 255 - data.range(0,1 /2) *255
-    circleGreenUp.current.color.g = 255 - data.range(0,1 /2) *245
-    circleGreenDown.current.color.g = 255 - data.range(0,1 /2) *245
-    circlePurpleUp.current.color.r = 255 - data.range(0,1 /2) *220
-    circlePurpleDown.current.color.r = 255 - data.range(0,1 /2) *220
+    circleGreenUp.current.color.g = 255 - data.range(0,1 /2) *255
+    circleGreenDown.current.color.g = 255 - data.range(0,1 /2) *255
+    circlePurpleUp.current.color.r = 255 - data.range(0,1 /2) *255
+    circlePurpleDown.current.color.r = 255 - data.range(0,1 /2) *255
      bloomRef.current.luminanceSmoothing = 2 - data.range(0,1 /2) 
   });
 
@@ -43,7 +43,7 @@ export default function Holes() {
           <Bloom
             ref={bloomRef}
             kernelSize={5}
-            luminanceThreshold={0.1}
+            luminanceThreshold={0.01}
             luminanceSmoothing={0.1}
             intensity={2}
 
