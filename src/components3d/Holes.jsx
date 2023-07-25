@@ -41,7 +41,7 @@ export default function Holes() {
       <group ref={groupRef} position={[0, 0, 0]}>
         <EffectComposer>
           <Bloom
-          ref={bloomRef}
+            ref={bloomRef}
             kernelSize={5}
             luminanceThreshold={0.1}
             luminanceSmoothing={0.1}
