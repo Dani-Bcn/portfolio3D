@@ -52,7 +52,7 @@ export default function Holes() {
           <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
             <ringGeometry args={[0.5, 0.51, 100, 0, 1, theLenght]} />
             <meshStandardMaterial   
-            transparent={"true"}
+            transparent={true}
             opacity={0.9}
             ref={circleBlueUp} />
           
