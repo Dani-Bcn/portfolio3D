@@ -45,7 +45,7 @@ export default function Holes() {
             kernelSize={5}
             luminanceThreshold={0.1}
             luminanceSmoothing={0.1}
-            intensity={2}
+            intensity={20}
 
           />
         </EffectComposer>
