@@ -22,7 +22,7 @@ export default function Holes() {
   
 
   useFrame(() => {
-    console.log(bloomRef.current.luminanceSmoothing)
+
     groupRef.current.rotation.z = -0.2 + data.range(0, 1 / 1) * 4.72;
     groupRef.current.scale.y = 1 + data.range(0, 1 / 1) * 1.1;
     groupRef.current.scale.x = 1 + data.range(0, 1 / 1) * 1.1;
@@ -45,7 +45,7 @@ export default function Holes() {
             kernelSize={5}
             luminanceThreshold={0.1}
             luminanceSmoothing={0.1}
-            intensity={10}
+            intensity={2}
 
           />
         </EffectComposer>
@@ -84,7 +84,7 @@ export default function Holes() {
             <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
               <ringGeometry args={[2.5, 2.52, 100, 0, -2.1, 1.5]} />
               <meshStandardMaterial
-              ref={circleBlueDown}             
+              ref={circlePurpleDown}             
               />
             </mesh>
           </group>
