@@ -2,95 +2,101 @@ import React, { useRef, useState } from "react";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 import { useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
+import { gsap } from "gsap";
 
 export default function Holes() {
   const groupRef = useRef();
+  const mainGroupRef = useRef();
   const data = useScroll();
   let theLenght = 1.5;
-  const [colorR,setColorR] = useState(255)
-  const circlePurpleUp = useRef()
-  const circlePurpleDown = useRef()
-  const circleBlueUp = useRef()
-  const circleBlueDown = useRef()
-  const circleGreenUp = useRef()
-  const circleGreenDown = useRef()
-  const bloomRef= useRef()
-
-
-  
-
-  
+  const [colorR, setColorR] = useState(255);
+  const circlePurpleUp = useRef();
+  const circlePurpleDown = useRef();
+  const circleBlueUp = useRef();
+  const circleBlueDown = useRef();
+  const circleGreenUp = useRef();
+  const circleGreenDown = useRef();
+  const bloomRef = useRef();
 
   useFrame(() => {
-
     groupRef.current.rotation.z = -0.2 + data.range(0, 1 / 1) * 4.72;
     groupRef.current.scale.y = 1 + data.range(0, 1 / 1) * 1.1;
     groupRef.current.scale.x = 1 + data.range(0, 1 / 1) * 1.1;
     theLenght = 1.5 + data.range(0, 1 / 1) * 4;
-    circleBlueUp.current.color.b = 255 - data.range(0,1 /2) *255
-    circleBlueDown.current.color.b = 255 - data.range(0,1 /2) *255
-    circleGreenUp.current.color.g = 255 - data.range(0,1 /2) *255
-    circleGreenDown.current.color.g = 255 - data.range(0,1 /2) *255
-    circlePurpleUp.current.color.r = 255 - data.range(0,1 /2) *255
-    circlePurpleDown.current.color.r = 255 - data.range(0,1 /2) *255
-     bloomRef.current.luminanceSmoothing = 2 - data.range(0,1 /2) 
+    circleBlueUp.current.color.b = 255 - data.range(0, 1 / 2) * 255;
+    circleBlueDown.current.color.b = 255 - data.range(0, 1 / 2) * 255;
+    circleGreenUp.current.color.g = 255 - data.range(0, 1 / 2) * 255;
+    circleGreenDown.current.color.g = 255 - data.range(0, 1 / 2) * 255;
+    circlePurpleUp.current.color.r = 255 - data.range(0, 1 / 2) * 255;
+    circlePurpleDown.current.color.r = 255 - data.range(0, 1 / 2) * 255;
+    bloomRef.current.luminanceSmoothing = 2 - data.range(0, 1 / 2);
+   
+
+    if (groupRef.current.rotation.z > 4) {
+      gsap.to(mainGroupRef.current.scale, {
+        x: 0.3,
+        z: 0.3,
+        y: 0.3,
+      }) 
+    }else{
+      gsap.to(mainGroupRef.current.scale, {
+        x: 1,
+        z: 1,
+        y: 1,
+      })
+    }
   });
 
   const Sphere = () => {
     return (
-      <group ref={groupRef} position={[0, 0, 0]}>
-        <EffectComposer>
-          <Bloom
-            ref={bloomRef}
-            kernelSize={5}
-            luminanceThreshold={0.01}
-            luminanceSmoothing={0.1}
-            intensity={2}
-
-          />
-        </EffectComposer>
-        <group>
+      <group ref={mainGroupRef}>
+        <group ref={groupRef} position={[0, 0, 0]}>
+          <EffectComposer>
+            <Bloom
+              ref={bloomRef}
+              kernelSize={3}
+              luminanceThreshold={0.01}
+              luminanceSmoothing={0.1}
+              intensity={0.5}
+            />
+          </EffectComposer>
+          <group>        
           <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
             <ringGeometry args={[0.5, 0.51, 100, 0, 1, theLenght]} />
-            <meshStandardMaterial   
-            transparent={true}
-            opacity={0.9}
-            ref={circleBlueUp} />
-          
+            <meshStandardMaterial
+              transparent={true}
+              opacity={0.9}
+              ref={circleBlueUp}
+            />
           </mesh>
           <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
-            <ringGeometry args={[0.5, 0.52, 100, 0, -2.1, 1.5]} />
-            <meshStandardMaterial  ref={circleBlueDown} />
-           
+            <ringGeometry args={[0.5, 0.51, 100, 0, -2.1, 1.5]} />
+            <meshStandardMaterial ref={circleBlueDown} />
           </mesh>
         </group>
         <group>
           <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
             <ringGeometry args={[1.5, 1.52, 100, 0, 1, 1.5]} />
-            <meshStandardMaterial ref={circleGreenUp}  />
-           
+            <meshStandardMaterial ref={circleGreenUp} />
           </mesh>
           <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
             <ringGeometry args={[1.5, 1.52, 100, 0, -2.1, 1.5]} />
-            <meshStandardMaterial  ref={circleGreenDown}/>
-            
+            <meshStandardMaterial ref={circleGreenDown} />
           </mesh>
           <group>
             <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
               <ringGeometry args={[2.5, 2.52, 100, 0, 1, 1.5]} />
               <meshStandardMaterial ref={circlePurpleUp} />
-              
             </mesh>
             <mesh position={[0, 0, 0]} scale={[1, 1, 1]}>
               <ringGeometry args={[2.5, 2.52, 100, 0, -2.1, 1.5]} />
-              <meshStandardMaterial
-              ref={circlePurpleDown}             
-              />
+              <meshStandardMaterial ref={circlePurpleDown} />
             </mesh>
           </group>
         </group>
       </group>
-
+      </group>
+      
     );
   };
 
