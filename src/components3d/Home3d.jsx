@@ -49,7 +49,6 @@ export default function Home3d() {
         <boxGeometry/>
         <meshStandardMaterial/>
       </mesh>
-      <OrbitControls/>
     </group>
   );
 }
