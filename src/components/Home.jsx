@@ -1,8 +1,7 @@
 import React from "react";
 import Scene3d from "../components3d/Scene3d";
 import Navbar from "./Navbar";
-import NavbarResponsive from "./NavbarREsponsive";
-
+import NavbarResponsive from "./NavbarResponsive";
 export default function Home() {
 
   return (
