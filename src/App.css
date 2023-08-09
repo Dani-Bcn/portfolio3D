@@ -7,29 +7,86 @@
     margin: 0;
 }
 
+h1{
+    color: rgb(104, 126, 134);
+    font-size: 5rem;
+    font-family: 'Bruno Ace', cursive;
+}
+
 Canvas {   
     overflow: hidden!important;
     width: 100vw!important;
-    height:100vh!important;
+    height:200vh!important;
     background-color: rgb(49, 48, 48);
     display: flex!important;
-    z-index: 10!important;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+article{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cnt-title{
+.cnt-navbar{
     position: absolute;
     display: flex;
-    height: 100vh;
-    width: 100vw;
     align-items: center;
-    justify-content: center;    
-    z-index: 20;
+    top:0;
+    width: 100vw;
+    height: 25px;
+    font-family: 'Bruno Ace', cursive;
 }
 
-.title{
-    font-size: 4rem;
-    font-family: 'Bruno Ace', cursive;
-    color: rgb(206, 209, 52);
+.cnt-navbar ul{
+    width: 100%;
+    display: flex;
+    color:wheat;
+    justify-content: space-around;    
 }
+
+.cnt-navbar ul li{
+    cursor: pointer;
+}
+
+.cnt-navbarRes{
+    position: absolute;
+    margin-top: 0;
+    width: 100vw;
+    height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background-color: rgba(136, 119, 83, 0.541);
+    z-index: 40;
+}
+.cnt-navbarRes h1{
+
+    font-size: 5rem;
+}
+
+.cnt-navbarRes li{
+    top: 0;
+    width: 40px;
+    height: 2px;
+    background-color: red;
+    margin: 5px 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+   .cnt-navbar {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 600px) {
+    .cnt-navbarRes {
+       display: none;
+     }
+   }
