@@ -7,19 +7,14 @@ export function Call_of_logo(props) {
     const data = useScroll()
     const { nodes, materials } = useGLTF("/Call_of_D_logo.glb");
 
-
-
         useFrame((state) => {
-            groupRef.current.rotation.y = state.clock.elapsedTime / 2;
-           
-        });
-    
+            groupRef.current.rotation.y = state.clock.elapsedTime / 2;           
+        });    
 
   return (
-    <group    onMouseOver={console.log("clikme")} ref={groupRef} scale={0.09}{...props} dispose={null}>
+    <group onMouseOver={console.log("clikme")} ref={groupRef} scale={0.09}{...props} dispose={null}>
 
-      <mesh
-   
+      <mesh   
         castShadow
         receiveShadow
         geometry={nodes.Cylinder1.geometry}
