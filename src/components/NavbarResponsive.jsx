@@ -7,9 +7,12 @@ export default function NavbarResponsive() {
   const [activeMenu, setActiveMenu] = useState(false)
   const variantsMenu = {
       open:{
-              y:1000     },
+              y:1000,
+              opacity:0.8
+               },
       closed:{
-          y:0,       
+          y:0,
+          opacity:0.5     
       },
   }
   const handleClick=(()=>{
@@ -29,7 +32,7 @@ export default function NavbarResponsive() {
       animate={activeMenu ? "open" : "closed"}>
         <h1>Menu</h1>
       </m.article>
-      <NavHamburguer handleClick={handleClick} />
+      <NavHamburguer handleClick={handleClick} activeMenu={activeMenu}/>
     </main>
   );
 }

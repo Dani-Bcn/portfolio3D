@@ -3,14 +3,31 @@ import {motion as m} from "framer-motion"
 export default function NavHamburguer(props) {
 
 const {handleClick} = props   
-const [activeMenu, setActiveMenu] = useState(true)
-
+const {activeMenu} = props 
+console.log(activeMenu)
+const variantsFirtsline = {
+   
+}
   return (
     <m.main className='cnt-navHamburguer'> 
         <ul  onClick={()=>handleClick()}>
-            <li></li>
-            <li></li>
-            <li></li>
+            <m.li
+                animate={{
+                    rotate: activeMenu ? 40:0,
+                    y: activeMenu ? 11:0
+                }}
+            ></m.li>
+             <m.li
+                animate={{
+                   opacity: activeMenu ? 0:1
+                }}
+            ></m.li>
+           <m.li
+                animate={{
+                    rotate: activeMenu ? -40:0,
+                    y: activeMenu ? -11:0
+                }}
+            ></m.li>
         </ul>
     </m.main>
   )
