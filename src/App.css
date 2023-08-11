@@ -5,6 +5,7 @@
 *{
     padding: 0;
     margin: 0;
+    overflow: hidden;
 }
 
 h1{
@@ -15,13 +16,14 @@ h1{
 
 Canvas {   
     overflow: hidden!important;
+    position: static;
     width: 100vw!important;
     height:200vh!important;
     background-color: rgb(49, 48, 48);
     display: flex!important;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 100;
 }
 
 article{
@@ -54,15 +56,7 @@ article{
     cursor: pointer;
 }
 
-.cnt-navbarRes{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items:flex-start;
-    justify-content: center;
-    background-color: rgba(39, 66, 143, 0.315);
-}
+
 
 .cnt-navbarRes article{
     width: 100vw;

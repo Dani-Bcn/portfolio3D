@@ -1,33 +1,47 @@
-import React from 'react'
-import { Canvas } from '@react-three/fiber'
-import { Environment, PerspectiveCamera, Scroll, ScrollControls } from '@react-three/drei'
-import Home3d from './Home3d'
-import { Call_of_logo } from './Call_of_logo'
+import React, { useEffect, useRef } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  Environment,
+  OrbitControls,
+  PerspectiveCamera,
+  Scroll,
+  ScrollControls,
+} from "@react-three/drei";
+import { Call_of_logo } from "./Call_of_logo";
 
 export default function Scene3d() {
-  return (
-    <main
-    
-    >
-        <Canvas>
-            <Environment
-                preset='city'
-            />    
-            <PerspectiveCamera
-                position={[0,0,50]}
-                makeDefault
-                fov={1500}
-            />
-            <ScrollControls 
-                pages={2}
-            >
-                <Scroll>
-                    <Home3d/>  
-                    <Call_of_logo/>  
-                </Scroll>
-            </ScrollControls>
-        </Canvas>
+  const camRef = useRef();
 
+  useEffect(() => { 
+      /*  
+        gsap.to(camRef.current.rotation, {
+            y: 0.05,
+            duration: 1,
+        }); 
+       */
+  });
+
+  return (
+    <main>
+      <Canvas>
+      {/*   <OrbitControls 
+        ref={orbitRef} 
+        autoRotate={true}
+        /> */}
+        <Environment preset="city" />
+        <PerspectiveCamera
+          ref={camRef}
+          position={[0, 0, 50]}
+          rotation={[0, 0, 0]}
+          makeDefault
+          fov={1500}
+        />
+        <ScrollControls pages={2}>
+          <Scroll>
+            <Call_of_logo />
+          </Scroll>
+        </ScrollControls>
+      </Canvas>
     </main>
-  )
+  );
 }

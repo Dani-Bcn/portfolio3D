@@ -5,10 +5,9 @@ export default function NavHamburguer(props) {
 const {handleClick} = props   
 const {activeMenu} = props 
 console.log(activeMenu)
-const variantsFirtsline = {
-   
-}
+
   return (
+    
     <m.main className='cnt-navHamburguer'> 
         <ul  onClick={()=>handleClick()}>
             <m.li

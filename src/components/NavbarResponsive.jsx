@@ -5,6 +5,7 @@ import NavHamburguer from "./NavHamburguer";
 
 export default function NavbarResponsive() {
   const [activeMenu, setActiveMenu] = useState(false)
+  
   const variantsMenu = {
       open:{
               y:1000,
@@ -22,11 +23,10 @@ export default function NavbarResponsive() {
 
   return (
     <main className="cnt-navbarRes">
-      <m.article
-      
-      transition={{
-        duration:0.5,
-        ease:"circIn"
+      <m.article      
+          transition={{
+          duration:0.5,
+          ease:"circIn"
       }}
       variants={variantsMenu}
       animate={activeMenu ? "open" : "closed"}>
