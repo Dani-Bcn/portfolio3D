@@ -4,99 +4,21 @@
 
 *{
     padding: 0;
-    margin: 0;
+    margin: 0;    
     overflow: hidden;
 }
 
-h1{
-    color: rgb(104, 126, 134);
-    font-size: 5rem;
-    font-family: 'Bruno Ace', cursive;
+html{
+   background-color: rgb(254 215 170)
 }
 
-Canvas {   
-    overflow: hidden!important;
-    position: static;
-    width: 100vw!important;
-    height:200vh!important;
-    background-color: rgb(49, 48, 48);
-    display: flex!important;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
+.btn{
+    color:red
 }
 
-article{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cnt-navbar{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    top:0;
-    width: 100vw;
-    height: 25px;
-    font-family: 'Bruno Ace', cursive;
-}
-
-.cnt-navbar ul{
-    width: 100%;
-    display: flex;
-    color:wheat;
-    justify-content: space-around;    
-}
-
-.cnt-navbar ul li{
-    cursor: pointer;
-}
+ 
 
 
 
-.cnt-navbarRes article{
-    width: 100vw;
-    height: 100vh;
-    background-color: red;
-    margin-top: -1000px;
-}
 
-.cnt-navHamburguer {
-    width: 100vw;
-    height: 50px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
-
-.cnt-navHamburguer ul{
-    position: absolute;
-    width: 40px;
-    height: 25px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    background-color: rgba(43, 107, 167, 0);
-    margin: 10px;
-}
-
-.cnt-navHamburguer li{ 
-    width: 100%;
-    height: 2px;
-    background-color: rgb(192, 4, 4);
-}
-
-@media screen and (max-width: 600px) {
-   .cnt-navbar {
-      display: none;
-    }
-  }
-  @media screen and (min-width: 600px) {
-    .cnt-navbarRes {
-       display: none;
-     }
-   }
+ 
