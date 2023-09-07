@@ -1,4 +1,4 @@
-import { React, useRef, useState } from "react";
+import { React, useEffect, useRef, useState } from "react";
 import { motion as m } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { gsap } from "gsap";
@@ -6,6 +6,16 @@ export default function Home() {
   const navigate = useNavigate();
   const button2dRef = useRef();
   const button3dRef = useRef();
+
+  const [removeEvent, setRemoveEvent] = useState();
+
+  const hadleChange = () => {
+    window.innerWidth > 670 ? setRemoveEvent(true) : setRemoveEvent(false);
+  };
+
+  window.addEventListener("resize", hadleChange);
+
+  console.log(removeEvent);
 
   const Over2d = () => {
     gsap.to("#back2d", {
@@ -19,14 +29,13 @@ export default function Home() {
       borderRadius: 100,
       rotateZ: 360,
       backgroundColor: "rgba(0,0,0,0)",
-      border: "4px #00a1d6 solid",
     });
     gsap.to("#button3d", {
       opacity: 0,
     });
 
     gsap.to("#titleName", {
-      x: 550,    
+      x: 550,
       duration: 0.5,
       ease: "power4.in",
     });
@@ -234,11 +243,11 @@ export default function Home() {
           z-50
           border-2
           border-orange-200
-
+          bg-contain
+          bg-center
+     bg-[url('./assets/img/2d.png')]
           "
-          >
-            2D
-          </m.button>
+          ></m.button>
           <m.button
             id="button3d"
             onClick={() => navigate("/3d")}
@@ -255,10 +264,11 @@ export default function Home() {
            text-blue-800
            border-2
            border-blue-400
+           bg-contain
+          bg-center
+     bg-[url('./assets/img/3d.png')]
            "
-          >
-            3D
-          </m.button>
+          ></m.button>
         </article>
       </section>
     </m.main>
