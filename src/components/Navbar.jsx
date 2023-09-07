@@ -27,23 +27,31 @@ export default function Navbar() {
   };
 
   return (
-    <main className="absolute top-0 left-0 z-20">
+    <main className="
+        absolute 
+        sm:top-0
+        left-0 
+        z-20
+        top-0        
+      "
+      >
       <section
         id="text"
-        className="       
-        backdrop-blur-md
-          w-screen
-          flex
+        className="   
+          backdrop-blur-md      
           justify-between
           items-center          
-          h-5
-          bg-slate-300/[0.5]
-          fixed      
+          sm:flex
+          hidden
+          bg-green-300/[0.3]                           
         "
       >
         <article
           id="text2"
-          className="flex column w-screen items-center justify-around"
+          className="flex 
+          column w-screen 
+          items-center 
+          justify-around"
         >
           <article className="flex">
             {arrayHome.map((e, i) => (
