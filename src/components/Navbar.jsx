@@ -1,8 +1,11 @@
 import React from "react";
 import { motion as m } from "framer-motion";
 import { gsap } from "gsap";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+
+  const navigate = useNavigate()
   const arrayContact = ["C", "O", "N", "T", "A", "C", "T"];
   const arrayHome = ["H", "O", "M", "E"];
   const arrayMore = ["M", "O", "R", "E"];
@@ -45,6 +48,7 @@ export default function Navbar() {
           <article className="flex">
             {arrayHome.map((e, i) => (
               <h1
+              onClick={()=> navigate("/")}
                 onPointerOver={(e) => handleOver(e)}
                 onPointerOut={(e) => handleOut(e)}
                 key={i}
@@ -58,6 +62,7 @@ export default function Navbar() {
           <article className="flex">
             {arrayContact.map((e, i) => (
               <h1
+                onClick={()=> navigate("/contact")}
                 onPointerOver={(e) => handleOver(e)}
                 onPointerOut={(e) => handleOut(e)}
                 key={i}
@@ -71,6 +76,7 @@ export default function Navbar() {
           <article className="flex">
             {arrayMore.map((e, i) => (
               <h1
+              onClick={()=> navigate("/more")}
                 onPointerOver={(e) => handleOver(e)}
                 onPointerOut={(e) => handleOut(e)}
                 key={i}
