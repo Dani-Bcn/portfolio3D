@@ -15,17 +15,28 @@ function App() {
     gsap.to("#circleHtml", {
       scrollTrigger: {
         trigger: "#circleHtml",
-        start: "top 600",
+        start: "top 500",
         markers: true,
         scrub: 1,
       },
       clipPath: "circle(45% at 50% 50%)",
       ease: "back.out(1.7)",
     });
+    gsap.to("#main", {
+      scrollTrigger: {
+        trigger: "#main",
+        start: "top 0",
+        markers: true,
+        scrub: 2,
+      },
+     y:-200,
+    });
+   
   });
 
   return (
-    <main
+    <mainç
+    id="main"
       className="
     absolute
     w-screen
@@ -86,7 +97,7 @@ function App() {
           Dani Pérez
         </h1>
 
-        <article
+        <article 
           className="
           relative
           w-[90%]
@@ -116,6 +127,7 @@ function App() {
             <p>Html</p>
           </div>
           <h2
+         
             className="
             w-full
             h-36
@@ -151,7 +163,7 @@ function App() {
           </h3>
         </article>
       </section>
-    </main>
+    </mainç>
   );
 }
 
