@@ -1,9 +1,29 @@
 import "./App.css";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import gsap from "gsap";
+import { useEffect, useState } from "react";
+import { ScrollTrigger } from "gsap/all";
 
 function App() {
   const location = useLocation();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const [handleOvered, setHandleOvered] = useState(false);
+
+  useEffect(() => {
+    gsap.to("#circleHtml", {
+      scrollTrigger: {
+        trigger: "#circleHtml",
+        start: "top 600",
+        markers: true,
+        scrub: 1,
+      },
+      clipPath: "circle(45% at 50% 50%)",
+      ease: "back.out(1.7)",
+    });
+  });
+
   return (
     <main
       className="
@@ -28,23 +48,12 @@ function App() {
         className="
           fixed
           flex
-          m-3
+          m-3          
           justify-end
           w-[95%]
           h-[75px]      
         "
       >
-        <button
-          className="              
-          h-2/3
-          w-24
-          m-2
-          bg-gradient-to-t to-blue-300 from-blue-200
-          rounded-[100px]
-        "
-        >
-          Contact
-        </button>
         <button
           className="
           m-2
@@ -67,26 +76,49 @@ function App() {
         bg-slate-400/[0.3]   
         "
       >
-        <article>
-          <h1
-            className="
+        <h1
+          className="
           font-sans
+          h-[300px]
           text-9xl          
         "
-          >
-            Dani Pérez
-          </h1>
-        </article>
+        >
+          Dani Pérez
+        </h1>
+
         <article
           className="
-          mt-20
+          relative
           w-[90%]
+          bg-slate-500
         "
         >
+          {" "}
+          <div
+            id="circleHtml"
+            className="
+          absolute
+          mt-20
+          -ml-20
+          w-52
+          h-52
+          bg-slate-100
+          clip-custom
+          text-slate-500
+          text-5xl
+          flex
+          font-bold
+          items-center
+          justify-center
+          
+        "
+          >
+            <p>Html</p>
+          </div>
           <h2
             className="
             w-full
-            h-26
+            h-36
             flex
             items-center
             justify-center
@@ -98,20 +130,21 @@ function App() {
           <h4
             className="
               mt-10
+              w-1/4
+              m-auto
               text-[1.2rem]
             "
           >
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            iusto obcaecati odit quibusdam numquam repellendus, veritatis
-            ratione deserunt cupiditate deleniti omnis fugit, sunt hic
-            laudantium possimus, facilis ducimus libero voluptatem.
+            iusto obcaecati odit quibusdam numquam repellendus.
           </h4>
         </article>
         <article>
           <h3
             className="        
-              text-5xl         
-              mt-32
+              text-5xl  
+              mt-20       
+              h-36
             "
           >
             Portfolio

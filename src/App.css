@@ -5,10 +5,10 @@
 @layer utilities {
 
     .clip-custom { 
-        clip-path: circle(20% at 50% 50%); 
+        clip-path: circle(0.01% at 50% 50%); 
     }
     .clip-custom-before { 
-        clip-path: circle(50% at 50% 50%);
+        clip-path: circle(45% at 50% 50%);
  
     } 
  }
@@ -16,7 +16,6 @@
 *{
     padding: 0;
     margin: 0;    
-    overflow-x: hidden;
 }
 
 
