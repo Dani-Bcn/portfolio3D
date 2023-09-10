@@ -9,161 +9,160 @@ function App() {
   const location = useLocation();
   gsap.registerPlugin(ScrollTrigger);
 
-  const [handleOvered, setHandleOvered] = useState(false);
-
-  useEffect(() => {
-    gsap.to("#circleHtml", {
-      scrollTrigger: {
-        trigger: "#circleHtml",
-        start: "top 500",
-        markers: true,
-        scrub: 1,
-      },
-      clipPath: "circle(45% at 50% 50%)",
-      ease: "back.out(1.7)",
-    });
-    gsap.to("#main", {
-      scrollTrigger: {
-        trigger: "#main",
-        start: "top 0",
-        markers: true,
-        scrub: 2,
-      },
-     y:-200,
-    });
-   
-  });
-
   return (
-    <mainç
-    id="main"
-      className="
-    absolute
-    w-screen
-    h-screen
-    flex      
-    flex-col
-    justify-start
-    items-center
-  "
+    <main
+      className="   
+      flex
+      flex-col
+       
+      
+        bg-slate-100
+      "
     >
       <div
         className="
         absolute
         w-screen
         h-screen
-        bg-gradient-to-t from-blue-200 to-blue-300
-      "
+        bg-gradient-to-t to-orange-200 from-orange-50/[0.5]"
       ></div>
-      <section
-        className="
-          fixed
-          flex
-          m-3          
-          justify-end
-          w-[95%]
-          h-[75px]      
-        "
+      <header
+        className="    
+      fixed    
+        flex
+        w-[90%]
+        m-5
+        items-center
+        justify-between
+        z-50
+      "
       >
+        <img
+          src="../Public/assests/img/Logo-Dani.svg"
+          alt="image-logo"
+          width={50}
+        />
         <button
           className="
-          m-2
-          h-2/3
-          w-16
-          rounded-[40%]
-          bg-gradient-to-t to-blue-300 from-blue-200
+          w-20
+          h-12
+          bg-green-500
+          rounded-[25px]
+          text-2xl
+          text-blue-200
+          font-bold
         "
-        ></button>
-      </section>
+        >
+          Coco
+        </button>
+      </header>
       <section
         className="
-        absolute
-        mt-56
-        w-[80%]
         flex
         flex-col
-        justify-center
+        mt-72
         items-center
-        bg-slate-400/[0.3]   
+        justify-between
+          w-[90%]
+          m-auto
+          z-10
         "
       >
         <h1
           className="
-          font-sans
-          h-[300px]
-          text-9xl          
+          w-full
+          h-[120px]
+          text-8xl
         "
         >
-          Dani Pérez
+          Dani
         </h1>
-
-        <article 
+        <h1
           className="
-          relative
-          w-[90%]
-          bg-slate-500
-        "
+        w-full
+        text-end
+        h-[120px]
+        text-8xl
+      "
         >
-          {" "}
-          <div
-            id="circleHtml"
-            className="
-          absolute
-          mt-20
-          -ml-20
-          w-52
-          h-52
-          bg-slate-100
-          clip-custom
-          text-slate-500
-          text-5xl
+          Pérez
+        </h1>
+      </section>
+      <section
+        className="
           flex
-          font-bold
+          flex-col
           items-center
           justify-center
-          
+          w-[80%]
+          m-10
+          h-[600px]
+          bg-gradient-to-t to-emerald-300/[0.5] from-emerald-50/[0.1]
+          rounded-tl-[150px]
+          rounded-tr-[150px]
+          z-10
         "
-          >
-            <p>Html</p>
-          </div>
-          <h2
-         
-            className="
-            w-full
-            h-36
-            flex
-            items-center
-            justify-center
+      >
+        <h2
+          className="
             text-5xl
+            mt-32
+            h-24
           "
-          >
-            About me
-          </h2>
-          <h4
-            className="
-              mt-10
-              w-1/4
-              m-auto
-              text-[1.2rem]
-            "
-          >
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            iusto obcaecati odit quibusdam numquam repellendus.
-          </h4>
-        </article>
-        <article>
-          <h3
-            className="        
-              text-5xl  
-              mt-20       
-              h-36
-            "
-          >
-            Portfolio
-          </h3>
-        </article>
+        >
+          About me
+        </h2>
+        <p
+          className="
+            w-full    
+            h-80       
+            text-2xl
+            px-4
+            ml-10
+          "
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+          tempora? Voluptas et quae fugit, veritatis molestiae error
+          praesentium.
+        </p>
       </section>
-    </mainç>
+      <section
+        className="
+        flex
+        flex-col
+        items-center
+        justify-center
+        w-[80%]
+        m-10
+        h-[600px]
+        bg-gradient-to-t to-emerald-300/[0.5] from-emerald-50/[0.1]
+        rounded-tl-[150px]
+        rounded-tr-[150px]
+        z-10
+      "
+      >
+        <h2
+           className="
+           text-5xl
+           mt-32
+           h-24
+         "
+        >
+          Skills
+        </h2>
+
+        <h3>Html</h3>
+      </section>
+
+      <h2
+        className="
+              h-20
+              text-5xl
+            "
+      >
+        Projects
+      </h2>
+    </main>
   );
 }
 
