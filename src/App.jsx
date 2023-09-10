@@ -16,6 +16,14 @@ function App() {
     items-center
   "
     >
+      <div
+        className="
+        absolute
+        w-screen
+        h-screen
+        bg-gradient-to-t from-blue-200 to-blue-300
+      "
+      ></div>
       <section
         className="
           fixed
@@ -75,9 +83,21 @@ function App() {
           w-[90%]
         "
         >
-          <h2>Welcome</h2>
+          <h2
+            className="
+            w-full
+            h-26
+            flex
+            items-center
+            justify-center
+            text-5xl
+          "
+          >
+            About me
+          </h2>
           <h4
             className="
+              mt-10
               text-[1.2rem]
             "
           >
@@ -87,16 +107,15 @@ function App() {
             laudantium possimus, facilis ducimus libero voluptatem.
           </h4>
         </article>
-        <article
-          className="
-            text-5xl
-          "
-        >
+        <article>
           <h3
-            className="
-            mt-32
+            className="        
+              text-5xl         
+              mt-32
             "
-          >Portfolio</h3>
+          >
+            Portfolio
+          </h3>
         </article>
       </section>
     </main>
