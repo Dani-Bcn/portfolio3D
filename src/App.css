@@ -5,7 +5,7 @@
 @layer utilities {
 
     .clip-custom { 
-        clip-path: circle(0.01% at 50% 50%); 
+        clip-path: circle(50% at 50% 50%); 
     }
     .clip-custom-before { 
         clip-path: circle(45% at 50% 50%);
@@ -16,7 +16,21 @@
 *{
     padding: 0;
     margin: 0;  
-    overflow-x: hidden;
+}
+h1{
+    font-size: 6rem;
+}
+h2{
+    font-size: 3.5rem;
+}
+h3{
+    font-size: 2.5rem;
+}
+h4{
+    font-size: 1.7rem;
+}
+p{
+    font-size: 1.5rem;
 }
 
 
