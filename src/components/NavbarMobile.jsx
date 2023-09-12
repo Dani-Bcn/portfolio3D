@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import gsap from "gsap";
+import Links from "./Links";
 import * as Scroll from "react-scroll";
 import {
   Link,
@@ -49,12 +50,8 @@ export default function NavbarMobile() {
             z-50
         "
       >
-        <img
-          src="../Public/assests/img/Logo-Dani.svg"
-          alt="image-logo"
-          width={50}
-        />
         <button
+        
           className="
             w-24
             h-12
@@ -69,7 +66,17 @@ export default function NavbarMobile() {
             font-bold
         "
         >
-          <Link activeClass="active" to="contact" spy={true} smooth={'easeInOut'} offset={-100} duration={2000}>Contact</Link>
+          <Link
+            onClick={() => setHovered(false)}
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={"easeInOut"}
+            offset={-100}
+            duration={2000}
+          >
+            Contact
+          </Link>
         </button>
         <button
           onClick={() => setHovered(!hovered)}
@@ -170,7 +177,9 @@ export default function NavbarMobile() {
             activeClass="active"
             to="about"
             spy={true}
-            smooth={'easeInOutQuart'} offset={-100} duration={2000}
+            smooth={"easeInOutQuart"}
+            offset={-100}
+            duration={2000}
           >
             <h4>About</h4>
           </Link>
@@ -181,7 +190,9 @@ export default function NavbarMobile() {
             activeClass="active"
             to="skills"
             spy={true}
-            smooth={'easeInOutQuart'} offset={-100} duration={2000}
+            smooth={"easeInOutQuart"}
+            offset={-100}
+            duration={2000}
           >
             <h4>Skills</h4>
           </Link>
@@ -191,7 +202,9 @@ export default function NavbarMobile() {
             activeClass="active"
             to="projects"
             spy={true}
-            smooth={'easeInOutQuart'} offset={-100} duration={2000}
+            smooth={"easeInOutQuart"}
+            offset={-100}
+            duration={2000}
           >
             <h4>Projects</h4>
           </Link>
@@ -201,53 +214,17 @@ export default function NavbarMobile() {
             activeClass="active"
             to="contact"
             spy={true}
-            smooth={'easeInOutQuart'} offset={-100} duration={2000}
+            smooth={"easeInOutQuart"}
+            offset={-100}
+            duration={2000}
           >
             <h4>Contact</h4>
           </Link>
         </article>
-        <article
-          className="
-                text-white
-                text-[1.2rem]
-                    w-[90%]
-                    flex
-                    items-center
-                    justify-between
-                "
-        >
-          <button
-            className="
-            w-28
-            h-16
-            rounded-[40px]
-            bg-indigo-300
-        "
-          >
-            Linkedin
-          </button>
-          <button
-            className="
-            w-28
-            h-16
-            rounded-[40px]
-            bg-indigo-300
-        "
-          >
-            Domestika
-          </button>
-          <button
-            className="
-              w-28
-              h-16
-              rounded-[40px]
-              bg-indigo-300
-          "
-          >
-            GitHub
-          </button>
-        </article>
-      </m.section>
+         <Links/>
+      
+      </m.section> 
+     
     </main>
   );
 }
