@@ -40,8 +40,8 @@ export default function Home() {
         w-screen
         h-screen
         bg-gradient-to-t to-orange-200 from-slate-900/[0]"
-      ></div>
-
+      >        
+      </div>
       <NavbarMobile />
       <Title />
       <About />

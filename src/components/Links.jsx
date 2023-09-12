@@ -2,9 +2,8 @@ import React from 'react'
 
 export default function Links() {
   return (
-    <main
-
-   
+    
+    <main   
           className="
                 text-white
                 text-[1.2rem]
