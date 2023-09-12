@@ -58,7 +58,8 @@ export default function Contact() {
             className='
                 w-screen
                 flex
-                ml-10
+                justify-center
+                
             '
         >
              <Links/>
