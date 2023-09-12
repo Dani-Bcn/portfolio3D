@@ -1,5 +1,15 @@
 import React, { useState } from "react";
 import gsap from "gsap";
+import * as Scroll from "react-scroll";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
 import { motion as m } from "framer-motion";
 
 export default function NavbarMobile() {
@@ -27,7 +37,11 @@ export default function NavbarMobile() {
   };
 
   return (
-    <main >
+    <main
+      className="
+        w-
+    "
+    >
       <header
         className="    
             fixed    
@@ -45,7 +59,7 @@ export default function NavbarMobile() {
           width={50}
         />
         <button
-        onClick={() => setHovered(!hovered)}
+          onClick={() => setHovered(!hovered)}
           className="
                 w-16
                 h-12
@@ -113,7 +127,7 @@ export default function NavbarMobile() {
         variants={variantsX}
         animate={hovered ? "open" : "closed"}
         className="
-            fixed
+           fixed
             flex
             flex-col
             items-center
@@ -126,22 +140,69 @@ export default function NavbarMobile() {
             clip-custom
         "
       >
-        <article    
-        className="
+        <article
+          className="
         mt-20
         h-[400px]
         flex
         flex-col
         justify-between     
-        ">
-            <h3>How can I help ?</h3>
-          <m.h4>About</m.h4>
-          <m.h4>Skills</m.h4>
-          <m.h4>Projects</m.h4>
-          <m.h4>Projects</m.h4>
+        "
+        >
+          <h3>How can I help ?</h3>
+
+          <Link
+          onClick={()=>setHovered(!hovered)}
+            className="cursor-pointer"
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <h4>About</h4>
+          </Link>
+
+          <Link
+          onClick={()=>setHovered(!hovered)}
+            className="cursor-pointer"
+            activeClass="active"
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <h4>Skills</h4>
+          </Link>
+          <Link
+          onClick={()=>setHovered(!hovered)}
+            className="cursor-pointer"
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <h4>Projects</h4>
+          </Link>
+          <Link
+          onClick={()=>setHovered(!hovered)}
+            className="cursor-pointer"
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            <h4>Contact</h4>
+          </Link>
         </article>
         <article
-                className="
+          className="
                 text-white
                 text-[1.2rem]
                     w-[90%]
@@ -181,6 +242,7 @@ export default function NavbarMobile() {
             GitHub
           </button>
         </article>
+      
       </m.section>
     </main>
   );

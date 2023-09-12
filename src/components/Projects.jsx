@@ -5,6 +5,7 @@ export default function Projects() {
 
     return (
       <section
+      id='projects'
       className="
       flex
       flex-col
@@ -20,6 +21,7 @@ export default function Projects() {
     "
     >
       <h2
+     
         className="
         mt-32
         text-slate-50

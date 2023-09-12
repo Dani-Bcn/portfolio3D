@@ -6,6 +6,7 @@ export default function Skills() {
 
   return (
     <section
+    id='skills'
     className="
     flex
     flex-col
