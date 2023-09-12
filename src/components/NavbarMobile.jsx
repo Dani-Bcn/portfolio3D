@@ -4,13 +4,25 @@ import { motion as m } from "framer-motion";
 
 export default function NavbarMobile() {
   const [hovered, setHovered] = useState(false);
-  console.log(hovered)
+
   const variantsX = {
-    closed: {
-      x: 500,
-    },
     open: {
-      x:  0,
+      y: -1200,
+      opacity: [0.5, 1],
+      clipPath: "circle(71% at 50% 50%)",
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+    closed: {
+      y: 0,
+      opacity: 0,
+      clipPath: "circle(0.05% at 50% 50%)",
+      transition: {
+        duration: 1,
+        ease: "easeIn",
+      },
     },
   };
 
@@ -40,7 +52,7 @@ export default function NavbarMobile() {
                 flex-col
                 items-center
                 justify-center
-                bg-green-500
+                bg-gradient-to-t to-indigo-400 from-indigo-200
                 rounded-[25px]
                 text-2xl
                 text-blue-200
@@ -83,7 +95,6 @@ export default function NavbarMobile() {
               rotate: hovered ? -45 : 0,
               y: hovered ? -9 : 0,
               transition: {
-                delay: 0.5,
                 duration: 0.5,
                 ease: "backOut",
               },
@@ -98,61 +109,27 @@ export default function NavbarMobile() {
         </button>
       </header>
       <m.section
-        animate={{
-            y: hovered ?-900:0,
-        }}     
-        transition= {{
-            delay: 1,
-            duration: 1,
-            opacity: [0, 0, 1],
-            ease: "circOut",
-        }}
-     
+        variants={variantsX}
+        animate={hovered ? "open" : "closed"}
         className="
             fixed
             flex
             flex-col
             items-center
             justify-around
-            mt-[900px]
+            mt-[1200px]
             w-screen
             h-screen
-            bg-gradient-to-t to-slate-500 from-slate-200
+            bg-gradient-to-t to-indigo-200 from-indigo-50
             z-40
+            clip-custom
         "
       >
-        <m.h2 
-        variants={variantsX} a
-        animate={hovered ? "open" : "closed"}>
-          Contact
-        </m.h2>
-        <m.h2
-          variants={variantsX}
-          animate={hovered ? "open" : "closed"}
-          transition={{
-            delay: 0.2,
-          }}
-        >
-          Contact
-        </m.h2>
-        <m.h2
-          variants={variantsX}
-          animate={hovered ? "open" : "closed"}
-          transition={{
-            delay: 0.4,
-          }}
-        >
-          Contact
-        </m.h2>
-        <m.h2
-          variants={variantsX}
-          animate={hovered ? "open" : "closed"}
-          transition={{
-            delay: 0.6,
-          }}
-        >
-          Contact
-        </m.h2>
+        <article>
+          <m.h2>Contact</m.h2>
+          <m.h2>Contact</m.h2>
+          <m.h2>Contact</m.h2>
+        </article>
       </m.section>
     </main>
   );

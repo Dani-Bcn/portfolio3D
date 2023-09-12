@@ -3,15 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
-
     .clip-custom { 
         clip-path: circle(50% at 50% 50%); 
     }
-    .clip-custom-before { 
-        clip-path: circle(45% at 50% 50%);
- 
-    } 
- }
+}
 
 *{
     padding: 0;

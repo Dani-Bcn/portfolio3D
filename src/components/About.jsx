@@ -11,7 +11,7 @@ export default function About() {
       w-[80%]
       m-10
       h-[600px]
-      bg-gradient-to-t to-emerald-300/[0.5] from-gray-50/[0.1]
+      bg-gradient-to-t to-orange-200 from-slate-900/[0]
       rounded-tl-[150px]
       rounded-tr-[150px]
       z-10

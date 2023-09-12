@@ -22,7 +22,7 @@ export default function Title() {
             font-Play
             text-transparent
             bg-clip-text
-            bg-gradient-to-r from-emerald-600 to-emerald-200
+            bg-gradient-to-r from-indigo-900 to-indigo-100
         "
       >
         Dani
@@ -34,7 +34,7 @@ export default function Title() {
             text-9xl
             text-transparent
             bg-clip-text
-            bg-gradient-to-r from-emerald-200 to-emerald-600
+            bg-gradient-to-r from-indigo-900 to-indigo-300
             h-[120px]
             font-Play
         "

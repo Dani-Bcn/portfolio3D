@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Skills() {
-    
+
     const wordsFrontEnd = ["Html", "Css", "Js", "React"];
 
   return (
@@ -14,7 +14,7 @@ export default function Skills() {
     w-[80%]
     mx-10
     h-[800px]
-    bg-gradient-to-t to-emerald-300/[0.5] from-emerald-50/[0.1]
+    bg-gradient-to-t to-orange-200 from-slate-900/[0]
     rounded-tl-[150px]
     rounded-tr-[150px]
     z-10

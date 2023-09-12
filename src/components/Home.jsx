@@ -21,7 +21,7 @@ export default function Home() {
         absolute
         w-screen
         h-screen
-        bg-gradient-to-t to-orange-200 from-orange-50/[0.5]"
+        bg-gradient-to-t to-orange-200 from-slate-900/[0]"
       ></div>     
       <NavbarMobile/>
       <Title/>
