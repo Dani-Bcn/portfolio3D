@@ -50,8 +50,7 @@ export default function NavbarMobile() {
             z-50
         "
       >
-        <button
-        
+        <button        
           className="
             w-24
             h-12
@@ -162,7 +161,7 @@ export default function NavbarMobile() {
       >
         <article
           className="
-        mt-20
+        mt-32
         h-[400px]
         flex
         flex-col
@@ -215,7 +214,6 @@ export default function NavbarMobile() {
             to="contact"
             spy={true}
             smooth={"easeInOutQuart"}
-            offset={-100}
             duration={2000}
           >
             <h4>Contact</h4>
