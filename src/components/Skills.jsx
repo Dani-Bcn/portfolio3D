@@ -32,7 +32,7 @@ export default function Skills() {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: skillsFront[x].offsetTop *0.7,
+          start: skillsFront[x].offsetTop *0.65,
           end:100,
           markers: true,
           scrub: 1,
@@ -48,7 +48,7 @@ export default function Skills() {
     tl.to(skillsBack[x], {
       scrollTrigger: {
         trigger: skillsBack[x],
-        start: skillsBack[x].offsetTop *0.7,
+        start: skillsBack[x].offsetTop *0.65,
         end:100,
         markers: true,
         scrub: 1,
@@ -63,7 +63,7 @@ export default function Skills() {
     tl.to(skillsDesign[x], {
       scrollTrigger: {
         trigger: skillsDesign[x],
-        start: skillsDesign[x].offsetTop *0.7,
+        start: skillsDesign[x].offsetTop *0.65,
         end:100,
         markers: true,
         scrub: 1,

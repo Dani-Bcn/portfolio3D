@@ -178,7 +178,7 @@ export default function NavbarMobile() {
             to="about"
             spy={true}
             smooth={"easeInOutQuart"}
-            offset={-100}
+            offset={-50}
             duration={2000}
           >
             <h4>About</h4>
@@ -191,7 +191,7 @@ export default function NavbarMobile() {
             to="skills"
             spy={true}
             smooth={"easeInOutQuart"}
-            offset={-100}
+            offset={-50}
             duration={2000}
           >
             <h4>Skills</h4>
@@ -203,7 +203,7 @@ export default function NavbarMobile() {
             to="projects"
             spy={true}
             smooth={"easeInOutQuart"}
-            offset={-100}
+            offset={-50}
             duration={2000}
           >
             <h4>Projects</h4>
@@ -215,6 +215,7 @@ export default function NavbarMobile() {
             to="contact"
             spy={true}
             smooth={"easeInOutQuart"}
+            offset={-50}
             duration={2000}
           >
             <h4>Contact</h4>
