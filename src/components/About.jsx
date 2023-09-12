@@ -21,6 +21,7 @@ export default function About() {
       className="           
         mt-16
         h-24
+        text-slate-50
       "
     >
       About me
@@ -31,6 +32,9 @@ export default function About() {
         h-80                
         px-4
         ml-10
+        bg-clip-text
+        text-transparent
+        bg-gradient-to-t to-indigo-600 from-orange-400
       "
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
