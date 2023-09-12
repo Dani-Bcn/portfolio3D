@@ -131,9 +131,7 @@ export default function NavbarMobile() {
         h-[400px]
         flex
         flex-col
-        justify-between 
-        text-white
-        font-bold       
+        justify-between     
         ">
             <h3>How can I help ?</h3>
           <m.h4>About</m.h4>
@@ -142,17 +140,19 @@ export default function NavbarMobile() {
         </article>
         <article
                 className="
+                text-white
+                text-[1.2rem]
                     w-[90%]
                     flex
-                    h-46                    
-                    bg-red-100
+                    items-center
+                    justify-between
                 "
         >
           <button
             className="
-            w-40
-            h-20
-            rounded-[50px]
+            w-28
+            h-16
+            rounded-[40px]
             bg-indigo-300
         "
           >
@@ -160,19 +160,19 @@ export default function NavbarMobile() {
           </button>
           <button
             className="
-              w-40
-              h-20
-              rounded-[50px]
-              bg-indigo-300
-          "
+            w-28
+            h-16
+            rounded-[40px]
+            bg-indigo-300
+        "
           >
             Domestika
           </button>
           <button
             className="
-              w-40
-              h-20
-              rounded-[50px]
+              w-28
+              h-16
+              rounded-[40px]
               bg-indigo-300
           "
           >
