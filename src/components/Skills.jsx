@@ -8,30 +8,75 @@ export default function Skills() {
   const tl = gsap.timeline();
 
   useEffect(() => {
-    var skills = document.querySelectorAll("#skillsFront");
-
-    tl.set(skills, {     
+    var skillsFront = document.querySelectorAll("#skillsFront");
+    var skillsBack = document.querySelectorAll("#skillsBack");
+    var skillsDesign = document.querySelectorAll("#skillsDesign");
+    tl.set(skillsFront, {  
+      opacity:0,  
+      color: "rgb(50,250,250)",
+      delay:1
+    });
+    tl.set(skillsBack, {  
+      opacity:0,  
+      color: "rgb(50,250,250)",
+      delay:1
+    });
+    tl.set(skillsDesign, {  
+      opacity:0,  
       color: "rgb(50,250,250)",
       delay:1
     });
 
-
-
     for (let x = 0; x < wordsFrontEnd.length; x++) {
-      console.log(skills[x].offsetTop)
-      tl.to(skills[x], {
+      console.log(skillsFront[x].offsetTop)
+      tl.to(skillsFront[x], {
         scrollTrigger: {
-          trigger: skills[x],
-          start: skills[x].offsetTop *0.7,
-          end:1000,
+          trigger: skillsFront[x],
+          start: skillsFront[x].offsetTop *0.7,
+          end:100,
           markers: true,
           scrub: 1,
         },
+        opacity:1,
         width:100,
         height:100,
       });
     }
-  });
+
+  for (let x = 0; x < wordsFrontEnd.length; x++) {
+    console.log(skillsBack[x].offsetTop)
+    tl.to(skillsBack[x], {
+      scrollTrigger: {
+        trigger: skillsBack[x],
+        start: skillsBack[x].offsetTop *0.7,
+        end:100,
+        markers: true,
+        scrub: 1,
+      },
+      opacity:1,
+      width:100,
+      height:100,
+    });
+  }
+  for (let x = 0; x < wordsFrontEnd.length; x++) {
+    console.log(skillsDesign[x].offsetTop)
+    tl.to(skillsDesign[x], {
+      scrollTrigger: {
+        trigger: skillsDesign[x],
+        start: skillsDesign[x].offsetTop *0.7,
+        end:100,
+        markers: true,
+        scrub: 1,
+      },
+      opacity:1,
+      width:100,
+      height:100,
+    });
+  }
+
+
+});
+
 
   return (
     <section
@@ -93,6 +138,7 @@ export default function Skills() {
                   my-2
                   bg-slate-300
                   clip-custom
+                  opacity:0
                 "               
               >
                 {e}
@@ -113,18 +159,19 @@ export default function Skills() {
           {wordsFrontEnd.map((e, i) => {
             return (
               <p
+              key={i}
+              id="skillsBack"
                 className="
-              flex     
-                         
-              items-center
-              justify-center
-              w-[100px]
-              h-24
-              my-2
-              bg-slate-300
-              clip-custom
-            "
-                key={i}
+                flex                              
+                items-center
+                justify-center
+                w-0
+                h-0
+                my-2
+                bg-slate-300
+                clip-custom
+                opacity:0
+                "
               >
                 {e}
               </p>
@@ -142,16 +189,18 @@ export default function Skills() {
           {wordsFrontEnd.map((e, i) => {
             return (
               <p
+                id="skillsDesign"
                 className="
-              flex                              
-              items-center
-              justify-center
-              w-[100px]
-              h-24
-              my-2
-              bg-slate-300
-              clip-custom
-            "
+                flex                              
+                items-center
+                justify-center
+                w-0
+                h-0
+                my-2
+                bg-slate-300
+                clip-custom
+                opacity:0
+                "
                 key={i}
               >
                 {e}
