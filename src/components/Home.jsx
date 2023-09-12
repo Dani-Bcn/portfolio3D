@@ -28,7 +28,7 @@ export default function Home() {
           style={{
           position:"absolute",
           width:2,
-          height:4000,
+          height:3800,
           backgroundColor:"rgba(255,0,255,0.2)",
           marginLeft:e }}
         ></div>

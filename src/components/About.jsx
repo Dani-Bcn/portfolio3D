@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <section
+    <main
     id='about'
     className="
       flex
@@ -42,6 +42,6 @@ export default function About() {
       tempora? Voluptas et quae fugit, veritatis molestiae error
       praesentium.
     </p>
-  </section>
+  </main>
   )
 }
