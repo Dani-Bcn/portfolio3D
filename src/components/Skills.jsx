@@ -4,7 +4,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { Center } from "@react-three/drei";
 export default function Skills() {
   gsap.registerPlugin(ScrollTrigger);
-  const wordsFrontEnd = ["Html", "Css", "Js", "React"];
+  const wordsFrontEnd = ["Html", "Css", "Js", "React","Api-rest","npm"];
+  const wordsBackEnd = ["Node.js", "Express", "MongoDB", "Postman"];
+  const wordsDesign = ["Taldwin","Gsap","Framer-motion","Three.js","Photoshop" ];
   const tl = gsap.timeline();
 
   useEffect(() => {
@@ -42,7 +44,7 @@ export default function Skills() {
       });
     }
 
-  for (let x = 0; x < wordsFrontEnd.length; x++) {
+  for (let x = 0; x < wordsBackEnd.length; x++) {
     console.log(skillsBack[x].offsetTop)
     tl.to(skillsBack[x], {
       scrollTrigger: {
@@ -56,7 +58,7 @@ export default function Skills() {
       height:100,
     });
   }
-  for (let x = 0; x < wordsFrontEnd.length; x++) {
+  for (let x = 0; x < wordsDesign.length; x++) {
     console.log(skillsDesign[x].offsetTop)
     tl.to(skillsDesign[x], {
       scrollTrigger: {
@@ -85,7 +87,7 @@ export default function Skills() {
     justify-between
     w-[80%]
     mx-10
-    h-[800px]
+    h-[1000px]
     bg-gradient-to-t to-orange-200 from-slate-900/[0]
     rounded-tl-[150px]
     rounded-tr-[150px]
@@ -107,14 +109,16 @@ export default function Skills() {
       items-center
       justify-between
       w-[110%]
-      h-full  
+      h-screen  
+      mt-52
       "
       >
         <section
           className="
           flex
           flex-col 
-          items-center                        
+          items-center         
+          h-[1200px]               
         "
         >
           {" "}
@@ -148,12 +152,12 @@ export default function Skills() {
           flex
           flex-col
           items-center
-          
+          h-[1200px]       
                       
         "
         >
           <h4>B-end </h4>
-          {wordsFrontEnd.map((e, i) => {
+          {wordsBackEnd.map((e, i) => {
             return (
               <p
               key={i}
@@ -180,10 +184,11 @@ export default function Skills() {
           flex
           flex-col
           items-center  
+          h-[1200px]       
         "
         >
           <h4> Design</h4>
-          {wordsFrontEnd.map((e, i) => {
+          {wordsDesign.map((e, i) => {
             return (
               <p
                 id="skillsDesign"
