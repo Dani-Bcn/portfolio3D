@@ -37,11 +37,7 @@ export default function NavbarMobile() {
   };
 
   return (
-    <main
-      className="
-        w-
-    "
-    >
+    <main>
       <header
         className="    
             fixed    
@@ -58,6 +54,23 @@ export default function NavbarMobile() {
           alt="image-logo"
           width={50}
         />
+        <button
+          className="
+            w-24
+            h-12
+            flex
+            flex-col
+            items-center
+            justify-center
+            bg-gradient-to-t to-indigo-300 from-indigo-200
+            rounded-[25px]
+            text-[1.2rem]
+            text-white
+            font-bold
+        "
+        >
+          <Link activeClass="active" to="contact" spy={true} smooth={'easeInOut'} offset={-100} duration={2000}>Contact</Link>
+        </button>
         <button
           onClick={() => setHovered(!hovered)}
           className="
@@ -152,51 +165,43 @@ export default function NavbarMobile() {
           <h3>How can I help ?</h3>
 
           <Link
-          onClick={()=>setHovered(!hovered)}
+            onClick={() => setHovered(!hovered)}
             className="cursor-pointer"
             activeClass="active"
             to="about"
             spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            smooth={'easeInOutQuart'} offset={-100} duration={2000}
           >
             <h4>About</h4>
           </Link>
 
           <Link
-          onClick={()=>setHovered(!hovered)}
+            onClick={() => setHovered(!hovered)}
             className="cursor-pointer"
             activeClass="active"
             to="skills"
             spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            smooth={'easeInOutQuart'} offset={-100} duration={2000}
           >
             <h4>Skills</h4>
           </Link>
           <Link
-          onClick={()=>setHovered(!hovered)}
+            onClick={() => setHovered(!hovered)}
             className="cursor-pointer"
             activeClass="active"
             to="projects"
             spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            smooth={'easeInOutQuart'} offset={-100} duration={2000}
           >
             <h4>Projects</h4>
           </Link>
           <Link
-          onClick={()=>setHovered(!hovered)}
+            onClick={() => setHovered(!hovered)}
             className="cursor-pointer"
             activeClass="active"
             to="contact"
             spy={true}
-            smooth={true}
-            offset={50}
-            duration={500}
+            smooth={'easeInOutQuart'} offset={-100} duration={2000}
           >
             <h4>Contact</h4>
           </Link>
@@ -242,7 +247,6 @@ export default function NavbarMobile() {
             GitHub
           </button>
         </article>
-      
       </m.section>
     </main>
   );
