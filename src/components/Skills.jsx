@@ -23,6 +23,7 @@ export default function Skills() {
     <h2
       className="
       mt-32
+      text-slate-50
     "
     >
       Skills
@@ -39,17 +40,17 @@ export default function Skills() {
       <section
         className="
           flex
-          flex-col                         
+          flex-col 
+          items-center                        
         "
       >
         {" "}
-        <h4>f-end</h4>
+        <h4> F-end </h4>
         {wordsFrontEnd.map((e, i) => {
           return (
             <p
               className="
-              flex     
-                         
+              flex                              
               items-center
               justify-center
               w-[100px]
@@ -69,10 +70,12 @@ export default function Skills() {
         className="
           flex
           flex-col
+          items-center
+          
                       
         "
       >
-        <h4>B-end</h4>
+        <h4>B-end </h4>
         {wordsFrontEnd.map((e, i) => {
           return (
             <p
@@ -98,10 +101,10 @@ export default function Skills() {
         className="
           flex
           flex-col
-                       
+          items-center  
         "
       >
-        <h4>Design</h4>
+        <h4> Design</h4>
         {wordsFrontEnd.map((e, i) => {
           return (
             <p

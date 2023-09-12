@@ -7,7 +7,7 @@ export default function NavbarMobile() {
 
   const variantsX = {
     open: {
-      y: -1200,
+      y: -900,
       opacity: [0.5, 1],
       clipPath: "circle(71% at 50% 50%)",
       transition: {
@@ -52,7 +52,7 @@ export default function NavbarMobile() {
                 flex-col
                 items-center
                 justify-center
-                bg-gradient-to-t to-indigo-400 from-indigo-200
+                bg-gradient-to-t to-indigo-300 from-indigo-200
                 rounded-[25px]
                 text-2xl
                 text-blue-200
@@ -117,18 +117,67 @@ export default function NavbarMobile() {
             flex-col
             items-center
             justify-around
-            mt-[1200px]
+            mt-[900px]
             w-screen
             h-screen
-            bg-gradient-to-t to-indigo-200 from-indigo-50
+            bg-gradient-to-t to-orange-200 from-orange-100
             z-40
             clip-custom
         "
       >
-        <article>
-          <m.h2>Contact</m.h2>
-          <m.h2>Contact</m.h2>
-          <m.h2>Contact</m.h2>
+        <article    
+        className="
+        mt-20
+        h-[400px]
+        flex
+        flex-col
+        justify-between 
+        text-white
+        font-bold       
+        ">
+            <h3>How can I help ?</h3>
+          <m.h4>About</m.h4>
+          <m.h4>Skills</m.h4>
+          <m.h4>Projects</m.h4>
+        </article>
+        <article
+                className="
+                    w-[90%]
+                    flex
+                    h-46                    
+                    bg-red-100
+                "
+        >
+          <button
+            className="
+            w-40
+            h-20
+            rounded-[50px]
+            bg-indigo-300
+        "
+          >
+            Linkedin
+          </button>
+          <button
+            className="
+              w-40
+              h-20
+              rounded-[50px]
+              bg-indigo-300
+          "
+          >
+            Domestika
+          </button>
+          <button
+            className="
+              w-40
+              h-20
+              rounded-[50px]
+              bg-indigo-300
+          "
+          >
+            GitHub
+          </button>
         </article>
       </m.section>
     </main>
