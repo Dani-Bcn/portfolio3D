@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        Play: ['"Playfair Display"'],
+        Play: ['"Cinzel"'],// Google fonts to index.html
       },
     },
   },

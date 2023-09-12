@@ -14,6 +14,19 @@ export default function Title() {
         z-10
     "
     >
+      <div
+        className="        
+          absolute
+          -mt-12
+          w-80
+          h-80
+          bg-gray-300
+          rounded-[200px]
+          z-10
+        "
+      >
+
+      </div>
       <h2
         className="
             w-full
@@ -23,6 +36,7 @@ export default function Title() {
             text-transparent
             bg-clip-text
             bg-gradient-to-r from-indigo-900 to-indigo-100
+            z-20
         "
       >
         Dani
@@ -31,15 +45,16 @@ export default function Title() {
         className="
             w-full
             text-end
-            text-9xl
+            text-8xl
             text-transparent
             bg-clip-text
             bg-gradient-to-r from-indigo-900 to-indigo-300
             h-[120px]
             font-Play
+            z-20
         "
       >
-        Pérez
+       Pérez
       </h1>
     </section>
   );

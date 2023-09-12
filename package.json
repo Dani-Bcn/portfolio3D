@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.14.2",
     "react-scroll": "^1.8.9",
+    "react-svg-path": "^1.14.0",
     "three": "^0.154.0"
   },
   "devDependencies": {
