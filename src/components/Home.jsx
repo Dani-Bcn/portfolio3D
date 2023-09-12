@@ -4,6 +4,8 @@ import About from "./About";
 import Skills from "./Skills";
 import Title from "./Title";
 import NavbarMobile from "./NavbarMobile";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 export default function Home() {
   const wordsFrontEnd = ["Html", "Css", "Js", "React"];
@@ -27,14 +29,8 @@ export default function Home() {
       <Title/>
       <About/>
       <Skills/>
-      <h2
-        className="
-              h-20
-              text-5xl
-            "
-      >
-        Projects
-      </h2>
+      <Projects/>
+      <Contact/>
     </main>
   );
 }

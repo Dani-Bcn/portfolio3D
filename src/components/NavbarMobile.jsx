@@ -27,7 +27,7 @@ export default function NavbarMobile() {
   };
 
   return (
-    <main onClick={() => setHovered(!hovered)}>
+    <main >
       <header
         className="    
             fixed    
@@ -45,6 +45,7 @@ export default function NavbarMobile() {
           width={50}
         />
         <button
+        onClick={() => setHovered(!hovered)}
           className="
                 w-16
                 h-12
@@ -136,6 +137,7 @@ export default function NavbarMobile() {
             <h3>How can I help ?</h3>
           <m.h4>About</m.h4>
           <m.h4>Skills</m.h4>
+          <m.h4>Projects</m.h4>
           <m.h4>Projects</m.h4>
         </article>
         <article
