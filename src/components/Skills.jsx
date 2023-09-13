@@ -4,35 +4,53 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { Center } from "@react-three/drei";
 export default function Skills() {
   gsap.registerPlugin(ScrollTrigger);
-  const wordsFrontEnd = ["Html", "Css", "Js", "React","Api-rest","npm","Node.js", "Express", "MongoDB", "Postman","Taldwin","Gsap","Framer-motion","Three.js","Photoshop" ];
+  const wordsFrontEnd = [
+    "Html",
+    "Css",
+    "Js",
+    "React",
+    "Api-rest",
+    "npm",
+    "Node.js",
+    "Express",
+    "MongoDB",
+    "Postman",
+    "Taldwin",
+    "Gsap",
+    "Framer-motion",
+    "Three.js",
+    "Photoshop",
+  ];
 
   const tl = gsap.timeline();
 
   useEffect(() => {
     var skillsFront = document.querySelectorAll("#skillsFront");
-   
-    tl.set(skillsFront, {  
-     
+
+    tl.set(skillsFront, {
       color: "rgb(50,250,250)",
-      delay:1,
-      clipPath:"circle(0% at 50% 50%)"
-    });   
+      delay: 1,
+      clipPath: "circle(0% at 50% 50%)",
+    });
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
-      console.log(skillsFront[x].offsetTop)
+      
+      console.log(skillsFront[x].offsetTop);
+
       tl.to(skillsFront[x], {
+
         scrollTrigger: {
           trigger: skillsFront[x],
           start: "center 600",
-          end:500,
+          end: 1000,
           scrub: 2,
         },
-        opacity:1,
-        y:150,
-        clipPath:"circle(50% at 50% 50%)"
+        color:"white",
+        opacity: 1,
+        clipPath: "circle(50% at 50% 50%)",
       });
     }
-});
+  });
 
   return (
     <section
@@ -54,29 +72,26 @@ export default function Skills() {
       <h2
         id="textSkills"
         className="
-      mt-32
-      text-slate-50
-    "
+          mt-32
+          text-slate-50
+        "
       >
         Skills
       </h2>
-      
-        <section
-          className="
-         float-right
-         -mt-32
+      <section
+        className="
+          float-right
           w-screen
           h-[1200px]          
         "
-        >                
-          {
-          wordsFrontEnd.map((e, i) => {
-           console.log(i)
-            return ( 
-              <p 
-                key={i}
-                id="skillsFront"
-                className="
+      >
+        {wordsFrontEnd.map((e, i) => {
+
+          return (
+            <p
+              key={i}
+              id="skillsFront"
+              className="
                 float-left   
                 flex
                 items-center
@@ -88,15 +103,15 @@ export default function Skills() {
                 my-2
                 mx-[9px]
                 opacity-0
-                  bg-slate-300
+                  bg-indigo-300
                   clip-custom
-                "               
-              >
-                {e}
-              </p>
-            );
-          })}
-        </section>
+                "
+            >
+              {e}
+            </p>
+          );
+        })}
+      </section>
     </section>
   );
 }
