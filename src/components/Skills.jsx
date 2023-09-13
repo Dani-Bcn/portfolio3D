@@ -63,10 +63,8 @@ export default function Skills() {
       
         <section
           className="
-         float-right
           w-[390px]
-          h-[1200px]     
-          bg-slate-600          
+          h-[1200px]          
         "
         >                
           {
@@ -78,9 +76,12 @@ export default function Skills() {
                 id="skillsFront"
                 className="
                 float-left   
+                flex
                 my-5
                 mx-[14px]
-                  bg-slate-300
+                items-center
+                justify-center
+                bg-slate-300
                   clip-custom
                   opacity:0
                 "               
