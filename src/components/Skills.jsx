@@ -34,13 +34,14 @@ export default function Skills() {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: skillsFront[x].offsetTop *0.65,
+          start: "center, center",
           end:100,
           scrub: 1,
         },
         opacity:1,
         width:100,
         height:100,
+        delay:0.5
       });
     }
 
@@ -49,7 +50,7 @@ export default function Skills() {
     tl.to(skillsBack[x], {
       scrollTrigger: {
         trigger: skillsBack[x],
-        start: skillsBack[x].offsetTop *0.65,
+        start: "center, center",
         end:100,
         scrub: 1,
       },
@@ -63,7 +64,7 @@ export default function Skills() {
     tl.to(skillsDesign[x], {
       scrollTrigger: {
         trigger: skillsDesign[x],
-        start: skillsDesign[x].offsetTop *0.65,
+        start: "center, center",
         end:100,
         scrub: 1,
       },
@@ -202,6 +203,7 @@ export default function Skills() {
                 bg-slate-300
                 clip-custom
                 opacity:0
+                text-1xl
                 "
                 key={i}
               >
