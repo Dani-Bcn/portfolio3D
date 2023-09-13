@@ -39,7 +39,9 @@ export default function NavbarMobile() {
   
 
   return (
-    <main>
+    <m.main
+   
+    >
       <header
         className="    
             fixed    
@@ -51,7 +53,14 @@ export default function NavbarMobile() {
             z-50
         "
       >
-        <button        
+        <m.button        
+         animate={{
+          y:[-200,0],
+          transition:{
+            duration:1,
+            ease:"backOut"
+          }
+        }}
           className="
             w-24
             h-12
@@ -77,8 +86,16 @@ export default function NavbarMobile() {
           >
             Contact
           </Link>
-        </button>
-        <button
+        </m.button>
+        <m.button
+         animate={{
+          y:[-200,0],
+          transition:{
+            duration:1,
+            delay:0.2,
+            ease:"backOut"
+          }
+        }}
           onClick={() => setHovered(!hovered)}
           className="
                 w-16
@@ -141,7 +158,7 @@ export default function NavbarMobile() {
                 my-1
             "
           ></m.div>
-        </button>
+        </m.button>
       </header>
       <m.section
         variants={variantsX}
@@ -225,6 +242,6 @@ export default function NavbarMobile() {
       
       </m.section> 
      
-    </main>
+    </m.main>
   );
 }
