@@ -23,7 +23,7 @@ export default function Skills() {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center center",
+          start: "center 600",
           end:1000,
           scrub: 2,
         },
@@ -63,7 +63,7 @@ export default function Skills() {
         <section
           className="
          float-right
-          w-[390px]
+          w-screen
           h-[1200px]          
         "
         >                
@@ -82,7 +82,7 @@ export default function Skills() {
                 h-28
                 w-28
                 my-2
-                mx-[5px]
+                mx-[9px]
                   bg-slate-300
                   clip-custom
                 "               
