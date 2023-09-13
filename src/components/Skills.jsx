@@ -12,9 +12,10 @@ export default function Skills() {
     var skillsFront = document.querySelectorAll("#skillsFront");
    
     tl.set(skillsFront, {  
-      opacity:0,  
+     
       color: "rgb(50,250,250)",
-      delay:1
+      delay:1,
+      clipPath:"circle(0% at 50% 50%)"
     });   
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
@@ -22,14 +23,12 @@ export default function Skills() {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center, center",
-          end:100,
-          scrub: 1,
+          start: "center center",
+          end:1000,
+          scrub: 2,
         },
-        opacity:1,
-        width:100,
-        height:100,
-        delay:0.5
+       
+        clipPath:"circle(50% at 50% 50%)"
       });
     }
 });
@@ -63,6 +62,7 @@ export default function Skills() {
       
         <section
           className="
+         float-right
           w-[390px]
           h-[1200px]          
         "
@@ -77,13 +77,14 @@ export default function Skills() {
                 className="
                 float-left   
                 flex
-                my-5
-                mx-[14px]
                 items-center
                 justify-center
-                bg-slate-300
+                h-28
+                w-28
+                my-2
+                mx-[5px]
+                  bg-slate-300
                   clip-custom
-                  opacity:0
                 "               
               >
                 {e}
