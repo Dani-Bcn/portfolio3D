@@ -3,49 +3,30 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 export default function About() {
-
-  let lettersString = "An LA-based award-winning design director and UI/UX design expert with 10 years of experience in design and management.";
+  let lettersString =
+    "An LA-based award-winning design director and UI/UX design expert with 10 years of experience in design and management.";
   gsap.registerPlugin(ScrollTrigger);
   let lettersArray = lettersString.split(" ");
   console.log(lettersArray);
 
   const tl = gsap.timeline();
-
   useEffect(() => {
-    var letters = document.querySelectorAll("#lettersArray");
+    const leters = document.querySelectorAll("#lettersArray");
 
-      for (let x = 0; x < lettersArray.length; x++) {
-    tl.set(letters[x], { 
-              
-      fontFamily:"Bodoni moda",
-    
-      opacity:0,
-      ease: "power4.out"
-
-
-     })
-
-        tl.to(letters[x], {  
-          scrollTrigger:{
-            trigger:letters[x],
-            start:"center 650",
-            end:1500,
-            scrub:2
-          
-          }  , 
-                
-          fontFamily:"Bodoni moda",
-          fontSize:27,
-      
-          duration:1,
-          height:30,
-          delay: -1.999,
-          opacity:1,
-          ease: "power4.out"
-        });
-      }
-   
-  },[]);
+    for (let x = 0; x < lettersArray.length; x++) {
+      tl.to(leters[x], {
+        scrollTrigger: {
+          trigger: leters[x],
+          start: "center 800",
+          end: 500,
+          markers: true,
+          scrub: 2,
+        },
+        opacity: 1,
+        marginTop:0
+      });
+    }
+  });
 
   return (
     <main
@@ -66,8 +47,7 @@ export default function About() {
     "
     >
       <h2
-        className="    
-               
+        className="                   
         mt-16
         h-24
         text-slate-50
@@ -89,14 +69,9 @@ export default function About() {
               id="lettersArray"
               className=" 
                 float-left
-                mx-2
                 opacity-0
-                h-7
-                       
-                flex
-                flex-col
-                items-center
                 justify-center
+                mt-[50px]
               "
             >
               {e}
