@@ -1,9 +1,9 @@
 import React from 'react'
 import { Canvas } from '@react-three/fiber';
 import { Environment, Html, OrbitControls, PerspectiveCamera, Scroll, ScrollControls } from '@react-three/drei';
-import { Model3d } from './model3d';
+import {Model} from './Model';
 
-export default function Escene3d() {
+export default function Escene() {
   return (
     <main
         className='
@@ -12,15 +12,12 @@ export default function Escene3d() {
         '
     >
         <Canvas>
-            <OrbitControls/>
-            
+            <OrbitControls/>            
         <Environment
             preset='city'
-          />
-       
+          />       
             <ScrollControls>
-                <Model3d/>
-
+                <Model/>
                 <Scroll/>
             </ScrollControls>
         </Canvas>

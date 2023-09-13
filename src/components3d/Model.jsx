@@ -1,10 +1,22 @@
 import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import gsap from "gsap";
 
-export function Model3d(props) {
+export function Model(props) {
+
   const { nodes, materials } = useGLTF("/Model3d.glb");
+
+  const model = useRef()
+
+
+  gsap.to(model.current,{
+    rotate:50
+  })
+
+
   return (
     <group 
+    ref={model}
         scale={0.005}
     {...props} dispose={null}>
       <mesh

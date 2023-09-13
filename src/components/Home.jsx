@@ -7,7 +7,7 @@ import Title from "./Title";
 import NavbarMobile from "./NavbarMobile";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Escene3d from "../components3d/Escene3d";
+import Escene from "../components3d/Escene";
 
 export default function Home() {
   
@@ -49,7 +49,7 @@ export default function Home() {
       <Skills />
       <Projects />
       <Contact /> 
-      <Escene3d/>
+      <Escene/>
       
     </main>
   );
