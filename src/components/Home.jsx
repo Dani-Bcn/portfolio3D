@@ -16,8 +16,7 @@ export default function Home() {
     <main
       className="   
       flex 
-      flex-col
-      bg-slate-100
+      flex-col     
       "
     >
       {
@@ -28,7 +27,7 @@ export default function Home() {
           style={{
           position:"absolute",
           width:2,
-          height:3800,
+          height:4400,
           backgroundColor:"rgba(255,0,255,0.2)",
           marginLeft:e }}
         ></div>

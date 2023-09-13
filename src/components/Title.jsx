@@ -1,4 +1,5 @@
 import React from "react";
+import { motion as m } from "framer-motion";
 
 export default function Title() {
   return (
@@ -14,7 +15,15 @@ export default function Title() {
         z-10
     "
     >
-      <div
+      <m.div
+        animate={{
+          scale: [0, 1],
+
+          transition: {
+            duration: 1,
+            ease: "circOut",
+          },
+        }}
         className="        
           absolute
           -mt-12
@@ -24,10 +33,16 @@ export default function Title() {
           rounded-[200px]
           z-10
         "
-      >
-
-      </div>
-      <h2
+      ></m.div>
+      <m.h1
+        animate={{
+          x: [-100, 0],
+          opacity: [0, 1],
+          transition: {
+            duration: 1,
+            ease: "circOut",
+          },
+        }}
         className="
             w-full
             text-8xl
@@ -40,8 +55,16 @@ export default function Title() {
         "
       >
         Dani
-      </h2>
-      <h1
+      </m.h1>
+      <m.h1
+        animate={{
+          x: [100, 0],
+          opacity: [0, 1],
+          transition: {
+            duration: 1,
+            ease: "circOut",
+          },
+        }}
         className="
             w-full
             text-end
@@ -54,8 +77,8 @@ export default function Title() {
             z-20
         "
       >
-       Pérez
-      </h1>
+        Pérez
+      </m.h1>
     </section>
   );
 }
