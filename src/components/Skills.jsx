@@ -43,14 +43,15 @@ export default function Skills() {
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
       
-      console.log(skillsFront[x].offsetTop);
+     
 
       tl.to(skillsFront[x], {
 
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center 600",
-          end: 1000,
+          start: "center 600", 
+          end: 500,
+          markers:true,
           scrub: 2,
         },
         color:"white",
@@ -96,11 +97,12 @@ export default function Skills() {
       >
         {wordsFrontEnd.map((e, i) => {
 
+
           return (
             <p
               key={i}
-              id="skillsFront"
-              className="
+              id="skillsFront" 
+              className={`
                 float-left   
                 flex
                 items-center
@@ -109,12 +111,12 @@ export default function Skills() {
                 w-28
                 text-center
                 text-[20px]
-                my-3
+                my-2
                 mx-[9px]
                 opacity-0
                   bg-indigo-300
                   clip-custom
-                "
+              `}
             >
               {e}
             </p>
