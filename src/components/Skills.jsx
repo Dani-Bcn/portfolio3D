@@ -51,7 +51,6 @@ export default function Skills() {
           trigger: skillsFront[x],
           start: "center 600", 
           end: 500,
-          markers:true,
           scrub: 2,
         },
         color:"white",

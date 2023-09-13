@@ -10,23 +10,30 @@ export default function About() {
   console.log(lettersArray);
 
   const tl = gsap.timeline();
-  let count = 0;
+
   useEffect(() => {
     var letters = document.querySelectorAll("#lettersArray");
-    setTimeout(() => {
+   
       for (let x = 0; x < lettersArray.length; x++) {
-        tl.to(letters[x], {     
+        tl.to(letters[x], {  
+          scrollTrigger:{
+            trigger:letters[x],
+            start:"200",
+            markers:true,
+            end:1000,
+            scrub:2
+          }  , 
           fontSize:25,          
           fontFamily:"Bodoni moda",
           marginTop:0,
-          duration:2,
+          duration:1,
           delay: -1.999,
           opacity:1,
           ease: "power4.out"
         });
       }
-    },2000);
-  });
+   
+  },[]);
 
   return (
     <main
@@ -47,7 +54,8 @@ export default function About() {
     "
     >
       <h2
-        className="           
+        className="    
+               
         mt-16
         h-24
         text-slate-50
@@ -72,8 +80,7 @@ export default function About() {
                 mx-2
                 opacity-0
                 h-7
-                mt-[150px]
-           
+                mt-[150px]           
                 flex
                 flex-col
                 items-center

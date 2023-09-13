@@ -1,10 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion as m } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 export default function Title() {
+
+  gsap.registerPlugin(ScrollTrigger)
+useEffect(()=>{
+
+  gsap.to("#name",{
+    scrollTrigger:{
+      trigger:"#name",
+      start:"center 300",
+      end:500,
+      scrub: 2,
+    },
+    x:-500,
+    
+    
+  })
+  gsap.to("#surName",{
+    scrollTrigger:{
+      trigger:"#name",
+      start:"center 300",
+      end:500,
+      scrub: 2,
+    },
+    x:500,
+    
+  })
+})
   return (
     <section
       className="
+      overflow-y-hidden
+      overflow-x-hidden
+
         flex
         flex-col
         my-72
@@ -35,6 +66,7 @@ export default function Title() {
         "
       ></m.div>
       <m.h1
+      id="name"
         animate={{
           x: [-100, 0],
           opacity: [0, 1],
@@ -57,6 +89,7 @@ export default function Title() {
         Dani
       </m.h1>
       <m.h1
+      id="surName"
         animate={{
           x: [100, 0],
           opacity: [0, 1],
