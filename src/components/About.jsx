@@ -13,20 +13,33 @@ export default function About() {
 
   useEffect(() => {
     var letters = document.querySelectorAll("#lettersArray");
-   
+
       for (let x = 0; x < lettersArray.length; x++) {
+    tl.set(letters[x], { 
+              
+      fontFamily:"Bodoni moda",
+      marginTop:-200,
+      opacity:0,
+      ease: "power4.out"
+
+
+     })
+
         tl.to(letters[x], {  
           scrollTrigger:{
             trigger:letters[x],
-            start:"200",
+            start:"center 800",
             markers:true,
             end:1000,
-            scrub:2
+            scrub:1
+          
           }  , 
-          fontSize:25,          
+                
           fontFamily:"Bodoni moda",
+          fontSize:27,
           marginTop:0,
           duration:1,
+          height:30,
           delay: -1.999,
           opacity:1,
           ease: "power4.out"
@@ -80,7 +93,7 @@ export default function About() {
                 mx-2
                 opacity-0
                 h-7
-                mt-[150px]           
+                mt-[-150px]           
                 flex
                 flex-col
                 items-center
