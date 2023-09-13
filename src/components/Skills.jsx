@@ -24,10 +24,11 @@ export default function Skills() {
         scrollTrigger: {
           trigger: skillsFront[x],
           start: "center 600",
-          end:1000,
+          end:500,
           scrub: 2,
         },
-       
+        opacity:1,
+        y:150,
         clipPath:"circle(50% at 50% 50%)"
       });
     }
@@ -63,6 +64,7 @@ export default function Skills() {
         <section
           className="
          float-right
+         -mt-32
           w-screen
           h-[1200px]          
         "
@@ -81,8 +83,11 @@ export default function Skills() {
                 justify-center
                 h-28
                 w-28
+                text-center
+                text-[20px]
                 my-2
                 mx-[9px]
+                opacity-0
                   bg-slate-300
                   clip-custom
                 "               
