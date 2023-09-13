@@ -3,9 +3,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 
 export default function About() {
+
   let lettersString = "An LA-based award-winning design director and UI/UX design expert with 10 years of experience in design and management.";
   gsap.registerPlugin(ScrollTrigger);
-  let lettersArray = lettersString.split("");
+  let lettersArray = lettersString.split(" ");
   console.log(lettersArray);
 
   const tl = gsap.timeline();
@@ -15,13 +16,13 @@ export default function About() {
     setTimeout(() => {
       for (let x = 0; x < lettersArray.length; x++) {
         tl.to(letters[x], {     
-          fontSize:25,  
-          fontFamily:"Bodoni Moda"  ,
-          fontWeight:"bold",
-          width:"1px",
-          duration:1,
-          delay: -0.98,
+          fontSize:25,          
+          fontFamily:"Bodoni moda",
+          marginTop:0,
+          duration:2,
+          delay: -1.999,
           opacity:1,
+          ease: "power4.out"
         });
       }
     },2000);
@@ -35,9 +36,9 @@ export default function About() {
       flex-col
       items-center
       justify-center
-
       w-[80%]
       m-10
+      x:50
       h-[600px]
       bg-gradient-to-t to-orange-200 from-slate-900/[0]
       rounded-tl-[150px]
@@ -71,8 +72,8 @@ export default function About() {
                 mx-2
                 opacity-0
                 h-7
-                my-0
-                w-[0.1px]
+                mt-[150px]
+           
                 flex
                 flex-col
                 items-center
