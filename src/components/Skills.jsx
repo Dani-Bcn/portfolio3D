@@ -14,12 +14,20 @@ export default function Skills() {
     "Node.js",
     "Express",
     "MongoDB",
-    "Postman",
+    "Postman",    
+    "GitHub",
+    "Heroku",
+    "Cloudinary",
+    "Netlify",
     "Taldwin",
     "Gsap",
     "Framer-motion",
     "Three.js",
+    "Figma",
     "Photoshop",
+    "Ilustrator",
+    "Cinema4D",
+    "Blender",
   ];
 
   const tl = gsap.timeline();
@@ -62,7 +70,7 @@ export default function Skills() {
       justify-between
       w-[80%]
       m-auto
-      h-[1000px]
+      h-[1400px]
       bg-gradient-to-t to-orange-200 from-slate-900/[0]
       rounded-tl-[150px]
       rounded-tr-[150px]
@@ -80,6 +88,7 @@ export default function Skills() {
       </h2>
       <section
         className="
+        mt-10
           float-right
           w-screen
           h-[1200px]          
@@ -100,7 +109,7 @@ export default function Skills() {
                 w-28
                 text-center
                 text-[20px]
-                my-2
+                my-3
                 mx-[9px]
                 opacity-0
                   bg-indigo-300
