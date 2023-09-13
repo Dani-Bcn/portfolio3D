@@ -187,6 +187,18 @@ export default function NavbarMobile() {
         "
         >
           <h3>How can I help ?</h3>
+          <Link
+            onClick={() => setHovered(!hovered)}
+            className="cursor-pointer"
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={"easeInOutQuart"}
+            offset={-50}
+            duration={2000}
+          >
+            <h4>Start</h4>
+          </Link>
 
           <Link
             onClick={() => setHovered(!hovered)}

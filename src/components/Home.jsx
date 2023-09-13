@@ -7,6 +7,7 @@ import Title from "./Title";
 import NavbarMobile from "./NavbarMobile";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Escene3d from "../components3d/Escene3d";
 
 export default function Home() {
   
@@ -14,6 +15,7 @@ export default function Home() {
   const lines =[20,40,60,370,350,330]
   return (
     <main
+    id="home"
       className="   
       flex 
       flex-col     
@@ -41,12 +43,14 @@ export default function Home() {
         bg-gradient-to-t to-orange-200 from-slate-900/[0]"
       >        
       </div>
-      <NavbarMobile />
+     <NavbarMobile />
       <Title />
       <About />
       <Skills />
       <Projects />
-      <Contact />
+      <Contact /> 
+      <Escene3d/>
+      
     </main>
   );
 }
