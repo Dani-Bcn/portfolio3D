@@ -19,7 +19,7 @@ export default function About() {
           trigger: leters[x],
           start: "center 800",
           end: 500,
-          markers: true,
+      
           scrub: 2,
         },
         opacity: 1,
