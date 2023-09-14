@@ -61,6 +61,13 @@ export default function Skills() {
   });
 
   return (
+    <main
+      className="
+        w-screen
+        h-[1400px]
+        bg-gradient-to-t from-purple-100 to-orange-50
+      "
+    >
     <section
       id="skills"
       className="
@@ -123,5 +130,6 @@ export default function Skills() {
         })}
       </section>
     </section>
+    </main>
   );
 }

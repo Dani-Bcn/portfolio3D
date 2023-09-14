@@ -24,19 +24,20 @@ export default function Home() {
          key={i}
           style={{
           position:"absolute",
+         zIndex:1,
           width:2,
-          height:4400,
-          backgroundColor:"rgba(255,0,255,0.2)",
+          height:4750,
+          backgroundColor:"rgba(255,0,255,0.1)",
           marginLeft:e }}
         ></div>
         )})
         }
       <div
         className="
-        absolute
+        absolute      
         w-screen
         h-screen
-        bg-gradient-to-t to-orange-200 from-slate-900/[0]"
+        bg-gradient-to-t to-orange-200 from-purple-100"
       >        
       </div>
      <NavbarMobile />

@@ -29,6 +29,16 @@ useEffect(()=>{
     x:500,
     
   })
+  gsap.to("#circle",{
+    scrollTrigger:{
+      trigger:"#circle",
+      start:"center 300",
+      end:250,
+      scrub: 2,
+    },
+    scale:0,
+    
+  })
 })
   return (
     <section
@@ -47,6 +57,7 @@ useEffect(()=>{
     "
     >
        <m.div
+         id="circle"
         animate={{
           scale: [0, 1],
 

@@ -32,20 +32,27 @@ export default function About() {
     <main
       id="about"
       className="
-      flex
-      flex-col
-      items-center
-      justify-center
-      w-[80%]
-      m-10
-      x:50
-      h-[600px]
-      bg-gradient-to-t to-orange-200 from-slate-900/[0]
-      rounded-tl-[150px]
-      rounded-tr-[150px]     
-      z-10
-    "
+      w-screen
+      h-screen
+      bg-gradient-to-t to-purple-100 from-orange-50
+      "     
     >
+      <section
+         className="
+         flex
+         flex-col
+         items-center
+         justify-center
+         w-[80%]
+         m-10
+         x:50
+         h-[600px]
+         bg-gradient-to-t to-orange-200 from-slate-900/[0]
+         rounded-tl-[150px]
+         rounded-tr-[150px]     
+         z-10
+       "
+      >
       <h2
         className="                   
         mt-16
@@ -58,7 +65,7 @@ export default function About() {
       <section
         className="       
           float-left
-          w-full
+          w-10/12
           h-72
         "
       >
@@ -68,16 +75,19 @@ export default function About() {
               key={i}
               id="lettersArray"
               className=" 
-                float-left
+                float-left               
                 opacity-0
-                justify-center
                 mt-[50px]
+                text-transparent
+                bg-clip-text
+                bg-gradient-to-l to-blue-800 from-emerald-700
               "
             >
               {e}
             </h4>
           );
         })}
+      </section>
       </section>
     </main>
   );

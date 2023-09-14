@@ -4,6 +4,14 @@ export default function Projects() {
    
 
     return (
+      <main
+        className='
+        w-screen
+        h-screen
+        bg-gradient-to-t to-purple-100 from-orange-100/[0.5]
+        '
+      
+      >
       <section
       id='projects'
       className="
@@ -41,6 +49,7 @@ export default function Projects() {
         
       </article>
     </section>
+    </main>
       )
   }
   
