@@ -11,20 +11,31 @@ export default function About() {
 
   const tl = gsap.timeline();
   useEffect(() => {
+
+    gsap.to("#textAbout", {
+      scrollTrigger: {
+        trigger: "#textAbout",
+        start: "center 600",
+        markers:true,
+        end: 500,    
+        scrub: 2,
+      },
+      opacity: 1,
+    });
     const leters = document.querySelectorAll("#lettersArray");
 
     for (let x = 0; x < lettersArray.length; x++) {
       tl.to(leters[x], {
         scrollTrigger: {
           trigger: leters[x],
-          start: "center 800",
-          end: 500,
-      
+          start: "center 1000",
+          end: 800,      
           scrub: 2,
         },
         opacity: 1,
         marginTop:0
       });
+      
     }
   });
 
@@ -54,7 +65,9 @@ export default function About() {
        "
       >
       <h2
-        className="                   
+      id="textAbout"
+        className="    
+        opacity-0               
         mt-16
         h-24
         text-slate-50
