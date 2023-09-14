@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.11.2",
+    "@cloudinary/url-gen": "^1.11.2",
     "@next/font": "^13.4.19",
     "@react-three/drei": "^9.80.9",
     "@react-three/fiber": "^8.13.7",

@@ -4,7 +4,7 @@ import gsap from "gsap";
 
 export function Model(props) {
 
-  const { nodes, materials } = useGLTF("/Model3d.glb");
+  const { nodes, materials } = useGLTF("/Model3d.gltf");
 
   const model = useRef()
 
@@ -96,4 +96,4 @@ export function Model(props) {
   );
 }
 
-useGLTF.preload("/Model3d.glb");
+useGLTF.preload("/Model3d.gltf");
