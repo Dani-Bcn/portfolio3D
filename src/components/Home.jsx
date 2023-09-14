@@ -1,5 +1,4 @@
 import React from "react";
-import Path, { Svg } from "react-svg-path";
 import gsap from "gsap";
 import About from "./About";
 import Skills from "./Skills";
@@ -7,7 +6,7 @@ import Title from "./Title";
 import NavbarMobile from "./NavbarMobile";
 import Projects from "./Projects";
 import Contact from "./Contact";
-import Escene from "../components3d/Escene";
+import Escene3d from "../components3d/Escene3d";
 
 export default function Home() {
   
@@ -43,14 +42,13 @@ export default function Home() {
         bg-gradient-to-t to-orange-200 from-slate-900/[0]"
       >        
       </div>
+      <Escene3d/>
      <NavbarMobile />
       <Title />
       <About />
       <Skills />
       <Projects />
-      <Contact /> 
-      <Escene/>
-      
+      <Contact />       
     </main>
   );
 }
