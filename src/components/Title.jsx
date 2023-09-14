@@ -46,7 +46,7 @@ useEffect(()=>{
         z-10
     "
     >
-     {/*  <m.div
+       <m.div
         animate={{
           scale: [0, 1],
 
@@ -64,7 +64,7 @@ useEffect(()=>{
           rounded-[200px]
           z-10
         "
-      ></m.div> */}
+      ></m.div> 
       <m.h1
       id="name"
         animate={{
