@@ -4,7 +4,7 @@ import gsap from "gsap";
 
 export function Model(props) {
 
-  const { nodes, materials } = useGLTF("/Model3d.gltf");
+  const { nodes} = useGLTF("/Model3d.gltf");
 
   const model = useRef()
 
