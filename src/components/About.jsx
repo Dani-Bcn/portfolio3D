@@ -16,7 +16,6 @@ export default function About() {
       scrollTrigger: {
         trigger: "#textAbout",
         start: "center 600",
-        markers:true,
         end: 500,    
         scrub: 2,
       },
