@@ -81,7 +81,7 @@ export default function NavbarMobile() {
             to="contact"
             spy={true}
             smooth={"easeInOut"}
-            offset={-100}
+            offset={0}
             duration={2000}
           >
             Contact
@@ -244,7 +244,7 @@ export default function NavbarMobile() {
             to="contact"
             spy={true}
             smooth={"easeInOutQuart"}
-            offset={-50}
+            offset={0}
             duration={2000}
           >
             <h4>Contact</h4>

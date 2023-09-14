@@ -80,7 +80,7 @@ export default function About() {
                 mt-[50px]
                 text-transparent
                 bg-clip-text
-                bg-gradient-to-l to-blue-800 from-emerald-700
+                bg-indigo-400
               "
             >
               {e}
