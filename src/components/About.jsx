@@ -57,6 +57,7 @@ export default function About() {
       w-screen
       h-screen
       bg-gradient-to-t to-purple-100 from-orange-50
+      -mt-10
       "     
     >
       <section
@@ -66,13 +67,14 @@ export default function About() {
          items-center
          justify-center
          w-[80%]
-         m-10
+        mt-20
+         ml-10
          x:50
          h-[600px]
          bg-gradient-to-t to-orange-200 from-slate-900/[0]
          rounded-tl-[150px]
          rounded-tr-[150px]     
-         z-10
+         z-20
        "
       >
       <h2

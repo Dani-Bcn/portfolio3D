@@ -43,7 +43,9 @@ useEffect(()=>{
   return (
     <section
       className="
+      overflow-y-hidden
       overflow-x-hidden
+
         flex
         flex-col
         my-72
@@ -56,8 +58,9 @@ useEffect(()=>{
     >
        <m.div
          id="circle"
-          animate={{
+        animate={{
           scale: [0, 1],
+
           transition: {
             duration: 1,
             ease: "circOut",
