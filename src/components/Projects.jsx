@@ -3,10 +3,10 @@ import React from "react";
 export default function Projects() {
   return (
     <main
-      className="
+      className="z-20
         w-screen
         h-screen
-        bg-gradient-to-t to-purple-100 from-slate-500/[0]"
+       "
     >
       <section
         id="projects"

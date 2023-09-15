@@ -6,7 +6,7 @@ export default function About() {
   let lettersString =
     "An LA-based award-winning design director and UI/UX design expert with 10 years of experience in design and management.";
   gsap.registerPlugin(ScrollTrigger);
-  let lettersArray = lettersString.split(" ");
+  let lettersArray = lettersString.split(",");
   console.log(lettersArray);
 
   const tl = gsap.timeline();
@@ -56,8 +56,9 @@ export default function About() {
       className="
       w-screen
       h-screen
-      bg-gradient-to-t to-purple-100 from-orange-50
-      -mt-10
+      z-10
+     
+     
       "     
     >
       <section
@@ -71,10 +72,9 @@ export default function About() {
          ml-10
          x:50
          h-[600px]
-         bg-gradient-to-t to-orange-200 from-slate-900/[0]
+         bg-gradient-to-t to-orange-300 from-orange-50/[0]
          rounded-tl-[150px]
-         rounded-tr-[150px]     
-         z-20
+         rounded-tr-[150px]   
        "
       >
       <h2
@@ -113,7 +113,7 @@ export default function About() {
               key={i}
               id="lettersArray"
               className=" 
-                float-left               
+              float-left              
                 opacity-0
                 mt-[50px]
                 text-transparent
