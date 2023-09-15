@@ -30,7 +30,7 @@ export default function About() {
         end: 500,    
         scrub: 2,
       },
-      x:-100,
+      x:-50,
       backgroundColor:"white"
     });
     const leters = document.querySelectorAll("#lettersArray");
@@ -54,7 +54,6 @@ export default function About() {
     <main
       id="about"
       className="
-      overflow-y-hidden
       w-screen
       h-screen
       bg-gradient-to-t to-purple-100 from-orange-50
@@ -94,7 +93,7 @@ export default function About() {
           w-64
           h-1
           -mt-5
-          ml-[200px]
+          ml-[100px]
           mb-10          
           bg-slate-50/[0]
         "

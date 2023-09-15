@@ -43,7 +43,6 @@ useEffect(()=>{
   return (
     <section
       className="
-      overflow-y-hidden
       overflow-x-hidden
         flex
         flex-col
