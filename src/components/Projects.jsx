@@ -12,6 +12,7 @@ export default function Projects() {
         trigger: "#titleProjects",
         start: "center 600",
         end: 500,
+        scrub:2
       },
       opacity: 1,
       marginLeft: 0,
@@ -21,6 +22,7 @@ export default function Projects() {
         trigger: "#underPro",
         start: "center 600",
         end: 500,
+        scrub:2
       },
       opacity: 1,
       marginLeft: 0,
