@@ -12,6 +12,7 @@ export default function Links() {
                     mb-32
                     items-center
                     justify-between
+                    z-10
                 "
         >
           <button

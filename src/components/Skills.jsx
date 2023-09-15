@@ -67,6 +67,7 @@ export default function Skills() {
   return (
     <main
       className="
+      
         w-screen
         h-[1400px]
         bg-gradient-to-t from-purple-100 to-orange-50
@@ -85,7 +86,6 @@ export default function Skills() {
       bg-gradient-to-t to-orange-200 from-slate-900/[0]
       rounded-tl-[150px]
       rounded-tr-[150px]
-      z-10
   "
       >
         <h2
@@ -102,7 +102,8 @@ export default function Skills() {
         mt-10
           float-right
           w-screen
-          h-[1200px]          
+          h-[1200px]    
+          z-10      
         "
         >
           {wordsFrontEnd.map((e, i) => {
@@ -124,6 +125,7 @@ export default function Skills() {
                 opacity-0
                   bg-indigo-300
                   clip-custom
+                  z-10
               `}
               >
                 {e}

@@ -8,13 +8,12 @@ export default function Contact() {
       className="
       w-screen
       h-screen
-      bg-gradient-to-t to-slate-500 from-slate-500
+      bg-slate-500
       flex
       flex-col
       items-center
       justify-around
-      "
-     
+      "     
     >
       
         <h2

@@ -6,7 +6,7 @@ export default function Projects() {
       className="
         w-screen
         h-screen
-        bg-gradient-to-t to-purple-100 from-slate-500"
+        bg-gradient-to-t to-purple-100 from-slate-500/[0]"
     >
       <section
         id="projects"

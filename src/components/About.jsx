@@ -19,6 +19,7 @@ export default function About() {
         end: 500,    
         scrub: 2,
       },
+      x:100,
       opacity: 1,
     });
     const leters = document.querySelectorAll("#lettersArray");
@@ -68,6 +69,7 @@ export default function About() {
         className="    
         opacity-0               
         mt-16
+        ml-[-200px]
         h-24
         text-slate-50
       "

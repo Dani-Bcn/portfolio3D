@@ -21,14 +21,14 @@ export default function Home() {
       lines.map((e,i) => {
         return(
         <div
-         key={i}
-          style={{
-          position:"absolute",
-         zIndex:1,
-          width:2,
-          height:4750,
-          backgroundColor:"rgba(255,0,255,0.1)",
-          marginLeft:e }}
+            key={i}
+            style={{
+            position:"absolute",
+            zIndex:1,
+            width:2,
+            height:4750,
+            backgroundColor:"rgba(255,0,255,0.1)",
+            marginLeft:e }}
         ></div>
         )})
         }
