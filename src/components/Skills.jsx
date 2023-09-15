@@ -14,7 +14,7 @@ export default function Skills() {
     "Node.js",
     "Express",
     "MongoDB",
-    "Postman",    
+    "Postman",
     "GitHub",
     "Heroku",
     "Cloudinary",
@@ -34,7 +34,15 @@ export default function Skills() {
 
   useEffect(() => {
     var skillsFront = document.querySelectorAll("#skillsFront");
-
+    gsap.to("#titleSkills", {
+      scrollTrigger: {
+        trigger: "#textAbout",
+        start: "center 600",
+        end: 500,
+        scrub: 2,
+      },
+      opacity: 1,
+    });
     tl.set(skillsFront, {
       color: "rgb(50,250,250)",
       delay: 1,
@@ -42,18 +50,14 @@ export default function Skills() {
     });
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
-      
-     
-
       tl.to(skillsFront[x], {
-
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center 600", 
+          start: "center 600",
           end: 500,
           scrub: 2,
         },
-        color:"white",
+        color: "white",
         opacity: 1,
         clipPath: "circle(50% at 50% 50%)",
       });
@@ -68,9 +72,9 @@ export default function Skills() {
         bg-gradient-to-t from-purple-100 to-orange-50
       "
     >
-    <section
-      id="skills"
-      className="
+      <section
+        id="skills"
+        className="
       flex
       flex-col
       items-center
@@ -83,32 +87,30 @@ export default function Skills() {
       rounded-tr-[150px]
       z-10
   "
-    >
-      <h2
-        id="textSkills"
-        className="
+      >
+        <h2
+          id="ttitlekills"
+          className="
           mt-32
           text-slate-50
         "
-      >
-        Skills
-      </h2>
-      <section
-        className="
+        >
+          Skills
+        </h2>
+        <section
+          className="
         mt-10
           float-right
           w-screen
           h-[1200px]          
         "
-      >
-        {wordsFrontEnd.map((e, i) => {
-
-
-          return (
-            <p
-              key={i}
-              id="skillsFront" 
-              className={`
+        >
+          {wordsFrontEnd.map((e, i) => {
+            return (
+              <p
+                key={i}
+                id="skillsFront"
+                className={`
                 float-left   
                 flex
                 items-center
@@ -123,13 +125,13 @@ export default function Skills() {
                   bg-indigo-300
                   clip-custom
               `}
-            >
-              {e}
-            </p>
-          );
-        })}
+              >
+                {e}
+              </p>
+            );
+          })}
+        </section>
       </section>
-    </section>
     </main>
   );
 }
