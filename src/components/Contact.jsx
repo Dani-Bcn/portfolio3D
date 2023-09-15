@@ -13,6 +13,7 @@ export default function Contact() {
       flex-col
       items-center
       justify-around
+      z-20
       "     
     >
       

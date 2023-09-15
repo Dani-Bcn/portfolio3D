@@ -22,6 +22,17 @@ export default function About() {
       x:100,
       opacity: 1,
     });
+    
+    gsap.to("#backLine", {
+      scrollTrigger: {
+        trigger: "#backLine",
+        start: "center 600",
+        end: 500,    
+        scrub: 2,
+      },
+      x:-100,
+      backgroundColor:"white"
+    });
     const leters = document.querySelectorAll("#lettersArray");
 
     for (let x = 0; x < lettersArray.length; x++) {
@@ -43,6 +54,7 @@ export default function About() {
     <main
       id="about"
       className="
+      overflow-y-hidden
       w-screen
       h-screen
       bg-gradient-to-t to-purple-100 from-orange-50
@@ -68,7 +80,7 @@ export default function About() {
       id="textAbout"
         className="    
         opacity-0               
-        mt-16
+        mt-20
         ml-[-200px]
         h-24
         text-slate-50
@@ -76,6 +88,17 @@ export default function About() {
       >
         About me
       </h2>
+      <div
+        id="backLine"
+        className="
+          w-64
+          h-1
+          -mt-5
+          ml-[200px]
+          mb-10          
+          bg-slate-50/[0]
+        "
+      ></div>
       <section
         className="       
           float-left
