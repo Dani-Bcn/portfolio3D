@@ -34,19 +34,10 @@ export default function Skills() {
 
   useEffect(() => {
     var skillsFront = document.querySelectorAll("#skillsFront");
-    gsap.to("#titleSkills", {
+
+    gsap.to("#underSkills", {
       scrollTrigger: {
-        trigger: "#titleSkills",
-        start: "center 600",
-        end: 500,
-        scrub: 2,
-      },
-      opacity: 1,
-      marginLeft:0
-    });
-    gsap.to("#underLine", {
-      scrollTrigger: {
-        trigger: "#underLine",
+        trigger:"#underSkills",
         start: "center 650",
         end: 500,
         scrub: 2,
@@ -54,6 +45,20 @@ export default function Skills() {
       opacity: 1,
       marginLeft:0
     });
+
+    gsap.to("#titleSkills", {
+      scrollTrigger: {
+        trigger:"#titleSkills",
+        start: "center 600",
+        end: 500,
+        scrub: 2,
+      },
+      opacity: 1,
+      marginLeft:0
+    });
+
+
+   
 
     tl.set(skillsFront, {
       color: "rgb(50,250,250)",
@@ -113,16 +118,18 @@ export default function Skills() {
         >
           Skills
         </h2>
-        <dir
-        id="underLine"
-          className="
-            w-1/2
-            h-1
-            bg-slate-50
-            ml-52
-            opacity-0
-          "
-        ></dir>
+       <div
+       id="underSkills"
+        className="
+          w-1/2
+          h-1
+          bg-slate-50
+          -mt-2
+          ml-52
+        "
+       />
+
+       
         <section
           className="
             mt-10

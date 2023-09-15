@@ -23,14 +23,14 @@ export default function About() {
       opacity: 1,
     });
     
-    gsap.to("#backLine", {
+    gsap.to("#underAbout", {
       scrollTrigger: {
-        trigger: "#backLine",
-        start: "center 600",
+        trigger: "#underAbout",
+        start: "center 650",
         end: 500,    
         scrub: 2,
       },
-      x:-50,
+      marginLeft:0,
       backgroundColor:"white"
     });
     const leters = document.querySelectorAll("#lettersArray");
@@ -57,8 +57,6 @@ export default function About() {
       w-screen
       h-screen
       z-10
-     
-     
       "     
     >
       <section
@@ -90,7 +88,7 @@ export default function About() {
         About me
       </h2>
       <div
-        id="backLine"
+        id="underAbout"
         className="
           w-64
           h-1

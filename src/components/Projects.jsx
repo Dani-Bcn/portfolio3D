@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 export default function Projects() {
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  useEffect(() => {
+    gsap.to("#titleProjects", {
+      scrollTrigger: {
+        trigger: "#titleProjects",
+        start: "center 600",
+        end: 500,
+      },
+      opacity: 1,
+      marginLeft: 0,
+    });
+    gsap.to("#underPro", {
+      scrollTrigger: {
+        trigger: "#underPro",
+        start: "center 600",
+        end: 500,
+      },
+      opacity: 1,
+      marginLeft: 0,
+    });
+  });
+
   return (
     <main
       className="z-20
@@ -14,7 +40,7 @@ export default function Projects() {
           flex
           flex-col
           items-center
-          justify-between
+          justify-start
           w-[80%]
           mx-10
           h-screen
@@ -25,14 +51,26 @@ export default function Projects() {
         "
       >
         <h2
+          id="titleProjects"
           className="
             mt-32
+            -ml-52
             text-slate-50
+            opacity-0
           "
         >
           Projects
         </h2>
-       
+        <div
+          id="underPro"
+          className="
+            w-4/6
+            h-1
+            ml-52
+            bg-slate-50
+            opacity-0
+          "
+        ></div>
       </section>
     </main>
   );
