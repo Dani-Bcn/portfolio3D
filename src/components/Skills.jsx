@@ -151,7 +151,7 @@ export default function Skills() {
                     mx-[9px]
                     opacity-0
                     bg-indigo-300
-                    clip-custom
+                    clip-circle
                     z-10
                   `}
               >
