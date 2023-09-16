@@ -12,8 +12,9 @@ export default function Projects() {
     gsap.to("#titleProjects", {
       scrollTrigger: {
         trigger: "#titleProjects",
-        start: "center 800",
-        end: 1500,
+        start: "center 900",
+        end:3000,
+        markers:true,
         scrub:2
       },
       opacity: 1,
@@ -22,9 +23,8 @@ export default function Projects() {
     gsap.to("#underPro", {
       scrollTrigger: {
         trigger: "#underPro",
-        start: "center 800",
-
-        end: 1500,
+        start: "center 900",
+       
         scrub:2
       },
       opacity: 1,
@@ -76,9 +76,7 @@ export default function Projects() {
             opacity-0
           "
         ></div>
-        <section
-          className=""
-        >
+        <section>
           <h3>Poke_ahorcado</h3>
           <img src={Images[0]} alt="" />
 

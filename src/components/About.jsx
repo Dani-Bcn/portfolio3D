@@ -70,7 +70,7 @@ export default function About() {
          ml-10
          x:50
          h-[600px]
-         bg-gradient-to-t to-orange-300 from-orange-50/[0]
+         bg-gradient-to-t to-orange-200 from-orange-50/[0]
          rounded-tl-[150px]
          rounded-tr-[150px]   
        "
