@@ -1,7 +1,8 @@
-import img1 from "/public/assests/img/img-poke.png"
-import img2 from "/public/assests/img/img-movies.png"
+import img1 from "../img/img-poke.png"
+import img2 from "../img/img-movies.png"
 
-const images =[
+ const images =[
+
     img1,
     img2
 ]
