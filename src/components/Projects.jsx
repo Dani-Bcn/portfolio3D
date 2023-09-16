@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-
+import images from "./Images";
 export default function Projects() {
  
   gsap.registerPlugin(ScrollTrigger);
@@ -29,16 +29,35 @@ export default function Projects() {
       marginLeft:0,
       backgroundColor:"white"
     });
-    
-  });
 
+    gsap.to("#img-poke",{
+      scrollTrigger:{
+        start:"center -500",
+        end:500,
+        markers:true,
+        scrub:2,
+      },
+      clipPath:"circle(28% at 50% 50%)"
+    })
+    
+
+  gsap.to("#img-movies",{
+    scrollTrigger:{
+      start:"center -900",
+      end:500,
+      markers:true,
+      scrub:2,
+    },
+    clipPath:"circle(28% at 50% 50%)"
+  })
+  });
   return (
     <main
-      id="about"
-      className="
+      id="projects"
+      className="     
       w-screen
-      h-screen
       z-10
+      overflow-hidden
       "     
     >
       <section
@@ -46,22 +65,22 @@ export default function Projects() {
          flex
          flex-col
          items-center
-         justify-center
+         justify-between
          w-[80%]
-        mt-20
+         my-50
          ml-10
          x:50
-         h-[600px]
+         h-10/12
          bg-gradient-to-t to-orange-200 from-orange-50/[0]
          rounded-tl-[150px]
          rounded-tr-[150px]   
        "
       >
       <h2
-      id="textProjects"
+    id="textProjects"
         className="    
         opacity-0               
-        mt-20
+        mt-32
         ml-[-200px]
         h-24
         text-slate-50
@@ -73,8 +92,8 @@ export default function Projects() {
         id="underPro"
         className="
           w-52
-          h-1
-          -mt-4
+          -mt-3
+          h-1          
           ml-[100px]
           mb-10          
           bg-slate-50/[0]
@@ -82,10 +101,32 @@ export default function Projects() {
       ></div>
       <section
       className="
-        w-scrceer
-        h-
+        w-[800px]
+        h-screen
+        my-10
+        flex
+        flex-col
+        items-center   
       "
-      >       
+      >    
+<h3>Poke Ahorcado</h3>
+      <img 
+      id="img-poke"
+        className="
+            clip-circle-0
+            -ml-32
+        "
+          src={images[0]} alt="img-poke" 
+      />  
+      <h3>Movies App</h3>
+       <img 
+       id="img-movies"
+        className="
+            clip-circle-0
+            ml-32
+        "
+        src={images[1]} alt="img-movies" 
+      />  
       </section>
       </section>
     </main>
