@@ -12,10 +12,9 @@
     .clip-circle { 
         clip-path: circle(70% at 50% 50%); 
     }
-
-}
-html{
-    overflow-x: hidden;
+    .clip-parallel-0 { 
+        clip-path: polygon(0 0, 100% 0%, 4% 6%, 0 99%);
+    }
 }
 *{
     padding: 0;
@@ -29,6 +28,7 @@ h2{
 }
 h3{
     font-size: 2.5rem;
+    color: rgb(255, 255, 255);
 }
 h4{
     font-size: 1.7rem;

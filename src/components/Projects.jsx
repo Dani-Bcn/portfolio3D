@@ -29,28 +29,25 @@ export default function Projects() {
       marginLeft:0,
       backgroundColor:"white"
     });
-
     gsap.to("#img-poke",{
       scrollTrigger:{
-        start:"center -500",
-        end:500,
-        markers:true,
+        start:"center -300",
+        end:2500,
+        scrub:2,
+      },
+      clipPath:"circle(28% at 50% 50%)"
+    })
+    gsap.to("#img-movies",{
+      scrollTrigger:{
+        start:"center -700",
+        end:3000,
         scrub:2,
       },
       clipPath:"circle(28% at 50% 50%)"
     })
     
+  },[]);
 
-  gsap.to("#img-movies",{
-    scrollTrigger:{
-      start:"center -900",
-      end:500,
-      markers:true,
-      scrub:2,
-    },
-    clipPath:"circle(28% at 50% 50%)"
-  })
-  });
   return (
     <main
       id="projects"
@@ -116,7 +113,7 @@ export default function Projects() {
             clip-circle-0
             -ml-32
         "
-          src={images[0]} alt="img-poke" 
+        src={images[0]} alt="img-poke" 
       />  
       <h3>Movies App</h3>
        <img 

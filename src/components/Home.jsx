@@ -27,13 +27,19 @@ export default function Home() {
      
        "
       ></div>
+      <NavbarMobile /> 
       <Lines />
-      <NavbarMobile />
       <Title />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+        <About />
+       <Skills />  
+    <Projects />
+      
+      
+    
+     
+ 
+      <Contact /> 
     </main>
+
   );
 }

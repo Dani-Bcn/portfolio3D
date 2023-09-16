@@ -60,20 +60,20 @@ export default function Skills() {
     tl.set(skillsFront, {
       color: "rgb(50,250,250)",
       delay: 1,
-      clipPath: "circle(0% at 50% 50%)",
+      clipPath: "polygon(25% 0%, 100% 0%, 30% 10%, 0% 100%)",
     });   
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center 800",
+          start: "center 700",
           end: 1000,
           scrub: 2,
         },
         color: "white",
         opacity: 1,
-        clipPath: "circle(50% at 50% 50%)",
+        clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
       });
     }
   });
@@ -152,7 +152,7 @@ export default function Skills() {
                     mx-[9px]
                     opacity-0
                     bg-indigo-300
-                    clip-circle
+                    clip-parallel-0
                     z-10
                   `}
               >
