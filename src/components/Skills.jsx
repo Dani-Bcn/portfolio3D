@@ -55,19 +55,13 @@ export default function Skills() {
       },
       opacity: 1,
       marginLeft:0
-    });
-
-
-   
+    });   
 
     tl.set(skillsFront, {
       color: "rgb(50,250,250)",
       delay: 1,
       clipPath: "circle(0% at 50% 50%)",
-    });
-   
-
-   
+    });   
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
       tl.to(skillsFront[x], {

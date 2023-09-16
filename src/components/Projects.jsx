@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import Images from "./Images";
 
 export default function Projects() {
+  console.log(Images)
 
   gsap.registerPlugin(ScrollTrigger)
 
@@ -56,7 +58,7 @@ export default function Projects() {
           id="titleProjects"
           className="
             mt-32
-            -ml-52
+            -ml-48
             text-slate-50
             opacity-0
           "
@@ -68,11 +70,18 @@ export default function Projects() {
           className="
             w-4/6
             h-1
-            ml-52
+            ml-40
             bg-slate-50
             opacity-0
           "
         ></div>
+        <section
+          className=""
+        >
+          <h3>Poke_ahorcado</h3>
+          <img src={Images[0]} alt="" />
+
+        </section>
       </section>
     </main>
   );

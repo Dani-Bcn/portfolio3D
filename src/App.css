@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-    .clip-custom { 
+    .clip-circle { 
         clip-path: circle(0% at 50% 50%); 
     }
 }
