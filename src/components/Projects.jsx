@@ -4,18 +4,17 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import Images from "./Images";
 
 export default function Projects() {
-  console.log(Images)
+  console.log(Images);
 
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
     gsap.to("#titleProjects", {
       scrollTrigger: {
         trigger: "#titleProjects",
-        start: "center 900",
-        end:3000,
-        markers:true,
-        scrub:2
+        start: "center 800",
+        end: 1500,
+        scrub: 2,
       },
       opacity: 1,
       marginLeft: 0,
@@ -23,9 +22,10 @@ export default function Projects() {
     gsap.to("#underPro", {
       scrollTrigger: {
         trigger: "#underPro",
-        start: "center 900",
-       
-        scrub:2
+        start: "center 800",
+
+        end: 1500,
+        scrub: 2,
       },
       opacity: 1,
       marginLeft: 0,
@@ -34,9 +34,11 @@ export default function Projects() {
 
   return (
     <main
-      className="z-20
+      className="
+      overflow-hidden
+      z-20
         w-screen
-        h-screen
+    
        "
     >
       <section
@@ -48,7 +50,6 @@ export default function Projects() {
           justify-start
           w-[80%]
           mx-10
-          h-screen
           bg-gradient-to-t to-orange-200 from-slate-900/[0]
           rounded-tl-[150px]
           rounded-tr-[150px]
@@ -76,10 +77,28 @@ export default function Projects() {
             opacity-0
           "
         ></div>
-        <section>
-          <h3>Poke_ahorcado</h3>
-          <img src={Images[0]} alt="" />
 
+        <section
+          className="
+          overflow-hidden
+          w-[1200px]
+          my-32
+          -ml-52
+          bg-red-200
+          "
+        >
+          <img
+            className="
+          
+           
+            
+                       
+            "
+            src={Images[0]}
+            alt="img-poke"
+            width={800}
+            height={800}
+          />
         </section>
       </section>
     </main>

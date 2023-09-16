@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @layer utilities {
-    .clip-circle { 
+    .clip-circle-0 { 
         clip-path: circle(0% at 50% 50%); 
     }
+    .clip-circle-50 { 
+        clip-path: circle(28% at 50% 50%); 
+    }
+    .clip-circle { 
+        clip-path: circle(70% at 50% 50%); 
+    }
+
 }
 
 *{

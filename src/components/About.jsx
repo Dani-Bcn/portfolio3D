@@ -4,9 +4,9 @@ import { ScrollTrigger } from "gsap/all";
 
 export default function About() {
   let lettersString =
-    "An LA-based award-winning design director and UI/UX design expert with 10 years of experience in design and management.";
+    "An LA-based ,award-winning , design director and , UI/UX design expert , with 10 years of , experience in design  , and management.";
   gsap.registerPlugin(ScrollTrigger);
-  let lettersArray = lettersString.split(" ");
+  let lettersArray = lettersString.split(" ,");
   console.log(lettersArray);
 
   const tl = gsap.timeline();
@@ -16,7 +16,8 @@ export default function About() {
       scrollTrigger: {
         trigger: "#textAbout",
         start: "center 800",
-        end: 1000,    
+        markers:true,
+        end: 750,    
         scrub: 2,
       },
       x:100,
@@ -27,7 +28,7 @@ export default function About() {
       scrollTrigger: {
         trigger: "#underAbout",
         start: "center 850",
-        end: 1000,    
+        end: 750,    
         scrub: 2,
       },
       marginLeft:0,
