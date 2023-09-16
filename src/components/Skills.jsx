@@ -39,7 +39,7 @@ export default function Skills() {
       scrollTrigger: {
         trigger:"#underSkills",
         start: "center 800",
-        end: 1000,
+        end: 1500,
         scrub: 2,
       },
       opacity: 1,
@@ -50,7 +50,7 @@ export default function Skills() {
       scrollTrigger: {
         trigger:"#titleSkills",
         start: "center 800",
-        end: 1000,
+        end: 1500,
         scrub: 2,
       },
       opacity: 1,

@@ -13,7 +13,7 @@ export default function Projects() {
       scrollTrigger: {
         trigger: "#titleProjects",
         start: "center 800",
-        end: 1000,
+        end: 1500,
         scrub:2
       },
       opacity: 1,
@@ -23,8 +23,8 @@ export default function Projects() {
       scrollTrigger: {
         trigger: "#underPro",
         start: "center 800",
-        
-        end: 1000,
+
+        end: 1500,
         scrub:2
       },
       opacity: 1,
