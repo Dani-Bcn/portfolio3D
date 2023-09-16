@@ -15,8 +15,8 @@ export default function About() {
     gsap.to("#textAbout", {
       scrollTrigger: {
         trigger: "#textAbout",
-        start: "center 600",
-        end: 500,    
+        start: "center 800",
+        end: 1000,    
         scrub: 2,
       },
       x:100,
@@ -26,8 +26,8 @@ export default function About() {
     gsap.to("#underAbout", {
       scrollTrigger: {
         trigger: "#underAbout",
-        start: "center 650",
-        end: 500,    
+        start: "center 850",
+        end: 1000,    
         scrub: 2,
       },
       marginLeft:0,

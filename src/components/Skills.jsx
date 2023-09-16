@@ -38,8 +38,8 @@ export default function Skills() {
     gsap.to("#underSkills", {
       scrollTrigger: {
         trigger:"#underSkills",
-        start: "center 650",
-        end: 500,
+        start: "center 800",
+        end: 1000,
         scrub: 2,
       },
       opacity: 1,
@@ -49,8 +49,8 @@ export default function Skills() {
     gsap.to("#titleSkills", {
       scrollTrigger: {
         trigger:"#titleSkills",
-        start: "center 600",
-        end: 500,
+        start: "center 800",
+        end: 1000,
         scrub: 2,
       },
       opacity: 1,
@@ -68,7 +68,7 @@ export default function Skills() {
         scrollTrigger: {
           trigger: skillsFront[x],
           start: "center 600",
-          end: 500,
+          end: 1000,
           scrub: 2,
         },
         color: "white",
@@ -120,6 +120,7 @@ export default function Skills() {
           bg-slate-50
           -mt-2
           ml-52
+          opacity-0
         "
        />
 

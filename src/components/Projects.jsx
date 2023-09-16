@@ -12,8 +12,8 @@ export default function Projects() {
     gsap.to("#titleProjects", {
       scrollTrigger: {
         trigger: "#titleProjects",
-        start: "center 600",
-        end: 500,
+        start: "center 800",
+        end: 1000,
         scrub:2
       },
       opacity: 1,
@@ -22,8 +22,9 @@ export default function Projects() {
     gsap.to("#underPro", {
       scrollTrigger: {
         trigger: "#underPro",
-        start: "center 600",
-        end: 500,
+        start: "center 800",
+        
+        end: 1000,
         scrub:2
       },
       opacity: 1,
