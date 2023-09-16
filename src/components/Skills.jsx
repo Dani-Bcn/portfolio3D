@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Center } from "@react-three/drei";
+
 export default function Skills() {
+  
   gsap.registerPlugin(ScrollTrigger);
   const wordsFrontEnd = [
     "Html",
@@ -19,7 +21,7 @@ export default function Skills() {
     "Heroku",
     "Cloudinary",
     "Netlify",
-    "Taldwin",
+    "Taildwin",
     "Gsap",
     "Framer-motion",
     "Three.js",
