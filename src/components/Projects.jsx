@@ -1,105 +1,92 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import Images from "./Images";
+import { ScrollTrigger } from "gsap/all";
 
 export default function Projects() {
-  console.log(Images);
-
+ 
   gsap.registerPlugin(ScrollTrigger);
-
+  
   useEffect(() => {
-    gsap.to("#titleProjects", {
+
+    gsap.to("#textProjects", {
       scrollTrigger: {
-        trigger: "#titleProjects",
-        start: "center 800",
-        end: 1500,
+        trigger: "#textProjects",
+        start: "center 900",
+        end: 3000,    
         scrub: 2,
       },
+      x:100,
       opacity: 1,
-      marginLeft: 0,
     });
+    
     gsap.to("#underPro", {
       scrollTrigger: {
         trigger: "#underPro",
-        start: "center 800",
-
-        end: 1500,
+        start: "center 900",
+        end: 3000,    
         scrub: 2,
       },
-      opacity: 1,
-      marginLeft: 0,
+      marginLeft:0,
+      backgroundColor:"white"
     });
+    
   });
 
   return (
     <main
+      id="about"
       className="
-      overflow-hidden
-      z-20
-        w-screen
-    
-       "
+      w-screen
+      h-screen
+      z-10
+      "     
     >
       <section
-        id="projects"
-        className="
-          flex
-          flex-col
-          items-center
-          justify-start
-          w-[80%]
-          mx-10
-          bg-gradient-to-t to-orange-200 from-slate-900/[0]
-          rounded-tl-[150px]
-          rounded-tr-[150px]
-          z-10
-        "
+         className="
+         flex
+         flex-col
+         items-center
+         justify-center
+         w-[80%]
+        mt-20
+         ml-10
+         x:50
+         h-[600px]
+         bg-gradient-to-t to-orange-200 from-orange-50/[0]
+         rounded-tl-[150px]
+         rounded-tr-[150px]   
+       "
       >
-        <h2
-          id="titleProjects"
-          className="
-            mt-32
-            -ml-48
-            text-slate-50
-            opacity-0
-          "
-        >
-          Projects
-        </h2>
-        <div
-          id="underPro"
-          className="
-            w-4/6
-            h-1
-            ml-40
-            bg-slate-50
-            opacity-0
-          "
-        ></div>
-
-        <section
-          className="
-          overflow-hidden
-          w-[1200px]
-          my-32
-          -ml-52
-          bg-red-200
-          "
-        >
-          <img
-            className="
-          
-           
-            
-                       
-            "
-            src={Images[0]}
-            alt="img-poke"
-            width={800}
-            height={800}
-          />
-        </section>
+      <h2
+      id="textProjects"
+        className="    
+        opacity-0               
+        mt-20
+        ml-[-200px]
+        h-24
+        text-slate-50
+      "
+      >
+        Projects
+      </h2>
+      <div
+        id="underPro"
+        className="
+          w-52
+          h-1
+          -mt-4
+          ml-[100px]
+          mb-10          
+          bg-slate-50/[0]
+        "
+      ></div>
+      <section
+      className="
+        w-scrceer
+        h-
+      "
+      >       
+      </section>
       </section>
     </main>
   );

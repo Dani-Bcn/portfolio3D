@@ -48,6 +48,7 @@ export default function NavbarMobile() {
             flex
             w-[90%]
             m-5
+            
             items-center
             justify-between
             z-50

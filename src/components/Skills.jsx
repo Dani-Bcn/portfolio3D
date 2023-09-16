@@ -67,7 +67,7 @@ export default function Skills() {
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
-          start: "center 600",
+          start: "center 800",
           end: 1000,
           scrub: 2,
         },

@@ -37,8 +37,7 @@ export default function Title() {
   return (
     <section
       className="
-      overflow-y-hidden
-      overflow-x-hidden
+      overflow-hidden
         flex
         flex-col
         my-72
