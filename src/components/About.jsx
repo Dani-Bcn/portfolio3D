@@ -7,7 +7,7 @@ export default function About() {
     "An LA-based ,award-winning design ,director and UI/UX ,design ,expert with 10 years ,of experience in ,design and ,management.";
   gsap.registerPlugin(ScrollTrigger);
   let lettersArray = lettersString.split(" ,");
-  console.log(lettersArray);
+ 
 
   const tl = gsap.timeline();
   useEffect(() => {
