@@ -124,14 +124,11 @@ export default function Skills() {
           ml-52
           opacity-0
         "
-       />
-
-       
+       />       
         <section
           className="
             mt-10
-            float-right
-            w-screen
+            w-screen           
             h-[1200px]    
             z-10      
           "
@@ -146,12 +143,12 @@ export default function Skills() {
                     flex
                     items-center
                     justify-center
-                    h-28
-                    w-28
+                    h-24
+                    w-24
                     text-center
                     text-[20px]
                     my-2
-                    mx-[9px]
+                    mx-4
                     opacity-0
                     bg-indigo-300
                     clip-parallel-0

@@ -14,36 +14,49 @@ export default function Links() {
                     z-10
                 "
     >
-      <button
-        className="
+      <a
+        href="https://www.linkedin.com/in/daniperezbnc/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <button
+          className="
               w-28
               h-16
               rounded-[40px]
               bg-indigo-300
           "
+        >
+          Linkedin
+        </button>
+      </a>
+      <a
+        href="https://www.domestika.org/es/nneodani/portfolio"
+        target="_blank"
       >
-        Linkedin
-      </button>
-      <button
-        className="
+        <button
+          className="
               w-28
               h-16
               rounded-[40px]
               bg-indigo-300
           "
-      >
-        Domestika
-      </button>
-      <button
-        className="
+        >
+          Domestika
+        </button>
+      </a>
+      <a href="https://github.com/Dani-Bcn"  target="_blank">
+        <button
+          className="
               w-28
               h-16
               rounded-[40px]
               bg-indigo-300
           "
-      >
-        GitHub
-      </button>
+        >
+          GitHub
+        </button>
+      </a>
     </main>
   );
 }

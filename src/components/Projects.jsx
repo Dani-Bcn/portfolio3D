@@ -10,16 +10,18 @@ export default function Projects() {
       text: "Poke-ahorcado",
       img: images[0],
       margin: "-ml-16",
+      link: "https://pokeahorcado.netlify.app/",
     },
     {
       id: "movies",
       text: "Movies-app",
       img: images[1],
       margin: "ml-16",
+      link: "https://apiappmovies.netlify.app/",
     },
     {
       id: "home",
-      text: "homeworks for kids",
+      text: "Homeworks for kids",
       img: images[2],
       margin: "-ml-20",
     },
@@ -58,14 +60,14 @@ export default function Projects() {
         scrollTrigger: {
           trigger: idProjects[x],
           start: "center 500",
-          end:1000,
+          end: 1000,
           scrub: 2,
         },
-      opacity:1, 
-        clipPath:"circle(25% at 50% 50%)"
+        opacity: 1,
+        clipPath: "circle(25% at 50% 50%)",
       });
     }
-  },);
+  });
 
   return (
     <main
@@ -123,13 +125,12 @@ export default function Projects() {
         flex
         flex-col
         items-center   
-        justify-between
-        
+        justify-between        
       "
         >
           {arrayProjects.map((e, i) => {
             return (
-              <article              
+              <article
                 className="
                 flex
                 flex-col
@@ -138,24 +139,19 @@ export default function Projects() {
               "
                 key={i}
               >
-                <h3
-                  className="
-                  text-center
-                  "
-                >
-                  {e.text}
-                </h3>
-                ,
+                <h3 className="text-center">{e.text}</h3>,
                 <section className="h-68">
-                <img
-                  id="idProjects" 
-                  className={`
-                   h-96
-                   clip-circle-0
-                    ${e.margin}
-                  `}
-                  src={e.img}
-                />
+                  <a href={e.link} target="blank">
+                    <img
+                      id="idProjects"
+                      className={`
+                        h-96
+                        clip-circle-0
+                        ${e.margin}
+                      `}
+                      src={e.img}
+                    />
+                  </a>
                 </section>
               </article>
             );
