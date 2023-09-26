@@ -9,7 +9,7 @@ export default function Projects() {
       id: "poke",
       text: "Poke-ahorcado",
       img: images[0],
-      margin: "-ml-16",
+      margin: "-ml-48",
       link: "https://pokeahorcado.netlify.app/",
       display: "hidden",
     },
@@ -17,7 +17,7 @@ export default function Projects() {
       id: "movies",
       text: "Movies-app",
       img: images[1],
-      margin: "ml-16",
+      margin: "-ml-5",
       link: "https://apiappmovies.netlify.app/",
       display: "hidden",
     },
@@ -25,7 +25,7 @@ export default function Projects() {
       id: "home",
       text: "Homeworks for kids",
       img: images[2],
-      margin: "-ml-20",
+      margin: "-ml-48",
       display: "block",
     },
   ];
@@ -59,11 +59,11 @@ export default function Projects() {
     gsap.to("#ct-links", {
       scrollTrigger: {
         trigger: "#ct-links",
-        start: "center -300",
+        start: "center -100",
         end: 1000,
         scrub: 2,
       },
-      marginLeft: -75,
+      marginLeft: -175,
       delay: 1,
     });
 
@@ -134,7 +134,7 @@ export default function Projects() {
         <section
           className="
           w-[800px]
-          h-[1500px]
+          h-[1150px]
           my-10
           flex
           flex-col
@@ -160,35 +160,41 @@ export default function Projects() {
                   items-center
                  "
                 >
-                  <a href={e.link} target="blank">
-                    <div
-                      className={`                     
+                  <div
+                    className={`                     
                         w-screen
                         1/2
                         flex       
                         items-center  
                       `}
-                    >
+                  >
+                    <a href={e.link} target="blank">
+                      <div
+                        className={`
+                          w-[600px]
+                          ${e.margin}
+           ` }
+                      >
+
+                     
                       <img
                         id="idProjects"
-                        className={`
-                        h-96
-                        clip-circle-0
-                        ${e.margin}
-                      `}
-                        src={e.img}
-                      />
-                      <div
-                        id="ct-links"
                         className="
-                          ml-32
-                          bg-slate-550
+                        clip-circle-0
+                       
+                      "
+                        src={e.img}
+                      /> </div>
+                    </a>
+                    <div
+                      id="ct-links"
+                      className="
+                          ml-40
                         "
-                      >
-                        {" "}
-                        <a href="https://github.com/Dani-Bcn/Home-works-frontEnd" target="blank">
-                          <div
-                            className={`
+                    >
+                     <a href="https://github.com/Dani-Bcn/Home-works-frontEnd" target="blank"> 
+                      <div
+                        className={`
                           w-36                        
                           h-36
                           flex
@@ -198,13 +204,16 @@ export default function Projects() {
                           clip-circle-50 
                           ${e.display}
                         `}
-                          >
-                            Front-end
-                          </div>
-                        </a>
-                        <a href="https://github.com/Dani-Bcn/Home-works-backEnd" target="blank">
-                          <div
-                            className={`
+                      >
+                        Front-end
+                      </div>
+                        </a> 
+                      <a
+                        href="https://github.com/Dani-Bcn/Home-works-backEnd"
+                        target="blank"
+                      >
+                        <div
+                          className={`
                           w-36
                           h-36
                           flex
@@ -214,13 +223,12 @@ export default function Projects() {
                           clip-circle-50   
                           ${e.display}
                         `}
-                          >
-                            Back-end
-                          </div>
-                        </a>
-                      </div>
+                        >
+                          Back-end
+                        </div>
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 </section>
               </article>
             );

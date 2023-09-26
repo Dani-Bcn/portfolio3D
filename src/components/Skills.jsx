@@ -31,6 +31,10 @@ export default function Skills() {
     "Cinema4D",
     "Blender",
   ];
+  const clipEfects=[
+    "polygon(25% 550%, 100% 0%, 30% 10%, 0% 100%)",
+    "polygon(105% 550%, 100% 50%, 30% 10%, 0% 100%)"
+  ]
 
   const tl = gsap.timeline();
 
@@ -62,10 +66,12 @@ export default function Skills() {
     tl.set(skillsFront, {
       color: "rgb(50,250,250)",
       delay: 1,
-      clipPath: "polygon(25% 0%, 100% 0%, 30% 10%, 0% 100%)",
+      clipPath: "polygon(25% 0%, 10% 0%, 30% 10%, 0% 100%)",
     });   
 
     for (let x = 0; x < wordsFrontEnd.length; x++) {
+
+     
       tl.to(skillsFront[x], {
         scrollTrigger: {
           trigger: skillsFront[x],
@@ -75,7 +81,8 @@ export default function Skills() {
         },
         color: "white",
         opacity: 1,
-        clipPath: "polygon(0 0, 100% 0%, 100% 100%, 0 100%)",
+        clipPath: `${clipEfects[1]}`,
+        transform:"rotate(-30deg)"
       });
     }
   });
